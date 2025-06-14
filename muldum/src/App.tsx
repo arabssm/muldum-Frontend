@@ -1,10 +1,12 @@
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from "./components/NavBar/NavBar";
 
 export default function App() {
-
   return (
-    <>
-      <p> 폰트 확인</p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavBar />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
