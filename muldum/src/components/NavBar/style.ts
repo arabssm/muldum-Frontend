@@ -1,7 +1,11 @@
 import styled from '@emotion/styled';
 
+interface ActiveProps {
+    isActive?: boolean;
+}
+
 export const Container = styled.div`
-    width : 100%;
+    width: 100%;
     height: 100vh;
 `;
 
@@ -16,13 +20,18 @@ export const MainArea = styled.div`
     background-color: white;
 `;
 
-export const BaseTag = styled.div`
+export const BaseTag = styled.div<ActiveProps>`
     display: flex;
     align-items: center;
     width: 100%;
     height: 6vh;
     border-radius: 8px;
     cursor: pointer;
+    background-color: ${({ isActive }) => (isActive ? '#FFF5EF' : 'transparent')};
+
+    &:hover {
+        background-color: #FFF5EF;
+    }
 `;
 
 export const LoginTag = styled(BaseTag)`
@@ -45,7 +54,7 @@ export const Icon = styled.img`
     margin-left: 8%;
 `;
 
-export const Text = styled.div`
-    color : #545454;
+export const Text = styled.div<ActiveProps>`
+    color: ${({ isActive }) => (isActive ? '#FF9B62' : '#545454')};
     margin-left: 4%;
 `;
