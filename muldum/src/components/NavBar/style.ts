@@ -8,9 +8,9 @@ export const MainArea = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 16%;
+    width: 13%;
     height: 100vh;
-    padding: 4% 2% 2% 2%;
+    padding: 3% 2% 2% 2%;
     border-right: 1px solid #D1D1D1;
     background-color: white;
 `;

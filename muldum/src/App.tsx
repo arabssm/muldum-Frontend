@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from "./components/NavBar/NavBar";
+import Main from './page/Main/Main';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<NavBar />} />
+        <Route path="/" element={<Main />} />
       </Routes>
     </BrowserRouter>
   )

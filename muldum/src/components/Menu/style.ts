@@ -2,8 +2,6 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 2%;
     width: 100%;
@@ -16,7 +14,7 @@ export const MenuArea = styled.div`
     width: 30%;
     background-color: #FAFAFA;
     border-radius: 12px;
-    padding: 2% 5% 2% 2%;
+    padding: 2% 6% 2% 3%;
     margin-bottom: 2%;
 `;
 
