@@ -44,8 +44,6 @@ export const TagArea = styled(BaseTag)`
 
 export const Icon = styled.img`
     display: flex;
-    width: 30px;
-    height: 30px;
     margin-left: 8%;
 `;
 

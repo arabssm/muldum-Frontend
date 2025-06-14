@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Title = styled.div`
     display: flex;
     justify-content: left;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #1D1D1D;
     margin-bottom: 1%;
@@ -19,7 +19,7 @@ export const Title = styled.div`
 export const Subtitle = styled.div`
     display: flex;
     justify-content: left;
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #707070;
     margin-bottom: 3%;
 `;

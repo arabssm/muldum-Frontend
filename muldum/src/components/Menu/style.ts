@@ -20,14 +20,14 @@ export const MenuArea = styled.div`
 
 export const Text = styled.div`
     justify-content: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #1D1D1D;
     margin-bottom: 3%;
 `;
 
 export const Shortcut = styled.div`
-    font-size: 16px;
+    font-size: 1rem;
     color: #707070;
     justify-content: center;
 `;
