@@ -1,6 +1,51 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-    width : 40%;
-    max-height: 100vh;
+    width : 100%;
+    height: 100vh;
+`;
+
+export const MainArea = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12%;
+    height: 100vh;
+    padding: 4% 2% 2% 2%;
+    border-right: 1px solid #D1D1D1;
+    background-color: white;
+`;
+
+export const BaseTag = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 6vh;
+    border-radius: 8px;
+    cursor: pointer;
+`;
+
+export const LoginTag = styled(BaseTag)`
+    background-color: #FAFAFA;
+    margin-bottom: 22%;
+`;
+
+export const SettingTag = styled(BaseTag)`
+    margin-top: 80%;
+`;
+
+export const TagArea = styled(BaseTag)`
+    margin-bottom: 8%;
+`;
+
+export const Icon = styled.img`
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-left: 8%;
+`;
+
+export const Text = styled.div`
+    color : #545454;
+    margin-left: 4%;
 `;
