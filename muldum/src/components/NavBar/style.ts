@@ -4,16 +4,11 @@ interface ActiveProps {
     isActive?: boolean;
 }
 
-export const Container = styled.div`
-    width: 100%;
-    height: 100vh;
-`;
-
 export const MainArea = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 12%;
+    width: 16%;
     height: 100vh;
     padding: 4% 2% 2% 2%;
     border-right: 1px solid #D1D1D1;
