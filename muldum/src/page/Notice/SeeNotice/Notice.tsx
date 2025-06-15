@@ -3,7 +3,7 @@ import * as _ from './style';
 import '../../App.css';
 import data, { icons } from './data';
 import Box from './Box';
-import NavBar from '../../components/NavBar/NavBar';
+import NavBar from '../../../components/NavBar/NavBar';
 import Pagination from './Pagination'
 
 const ITEMS_PER_PAGE = 10;
