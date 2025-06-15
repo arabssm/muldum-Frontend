@@ -23,10 +23,6 @@ export const BaseTag = styled.div<ActiveProps>`
     border-radius: 8px;
     cursor: pointer;
     background-color: ${({ isActive }) => (isActive ? '#FFF5EF' : 'transparent')};
-
-    &:hover {
-        background-color: #FFF5EF;
-    }
 `;
 
 export const LoginTag = styled(BaseTag)`
