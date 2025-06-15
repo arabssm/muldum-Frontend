@@ -16,6 +16,7 @@ export const MenuArea = styled.div`
     border-radius: 12px;
     padding: 2% 6% 2% 3%;
     margin-bottom: 2%;
+    cursor: pointer;
 `;
 
 export const Text = styled.div`
