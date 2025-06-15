@@ -85,3 +85,26 @@ export const DateText = styled.span`
     font-size: 0.8rem;
     color: #909090;
 `;
+
+export const PaginationWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+    gap: 1%;
+`;
+
+export const PageButton = styled.button<{ active?: boolean }>`
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 200px;
+    padding: 0.7% 1%;
+    cursor: pointer;
+
+    ${({ active }) =>
+        active &&
+        `
+        background-color: #FFF5EF;
+        color: #FF9B62;
+    `}
+`;

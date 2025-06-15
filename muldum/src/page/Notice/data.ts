@@ -17,6 +17,9 @@ const data = [
     { idx: 8, title: "7월 MT 신청 안내", date: "2025-06-10T14:00:00Z" },
     { idx: 9, title: "7월 MT 신청 안내", date: "2025-06-10T14:00:00Z" },
     { idx: 10, title: "6월 중간 발표회 공지", date: "2025-06-14T09:30:00Z" },
+    { idx: 11, title: "7월 MT 신청 안내", date: "2025-06-10T14:00:00Z" },
+    { idx: 12, title: "7월 MT 신청 안내", date: "2025-06-10T14:00:00Z" },
+    { idx: 13, title: "6월 중간 발표회 공지", date: "2025-06-14T09:30:00Z" },
 ];
 
 export default data;
