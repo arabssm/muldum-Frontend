@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { IconMenu } from './IconMenu';
 import * as _ from './style';
 import '../../App.css';
 
 export default function NavBar() {
-    const [activeMenu, setActiveMenu] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
 
     return (
         <_.MainArea>
             {IconMenu.map((item) => {
-                const isActive = activeMenu === item.label;
+                const isActive = location.pathname === item.path;
+
                 const TagComponent =
                     item.label === '로그인'
                         ? _.LoginTag
@@ -22,10 +22,7 @@ export default function NavBar() {
                 return (
                     <TagComponent
                         key={item.label}
-                        onClick={() => {
-                            setActiveMenu(item.label);
-                            navigate(item.path);
-                        }}
+                        onClick={() => navigate(item.path)}
                         isActive={isActive}
                     >
                         <_.Icon
