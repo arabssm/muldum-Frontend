@@ -11,7 +11,7 @@ export const MenuArea = styled.div`
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
-    width: 30%;
+    width: 35%;
     background-color: #FAFAFA;
     border-radius: 12px;
     padding: 2% 6% 2% 3%;
