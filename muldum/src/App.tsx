@@ -8,6 +8,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/notice" element={<Notice />} />
+        <Route path="/notice/:id" element={<Notice />} />
       </Routes>
     </BrowserRouter>
   )
