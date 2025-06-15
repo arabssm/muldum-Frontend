@@ -108,3 +108,7 @@ export const PageButton = styled.button<{ active?: boolean }>`
         color: #FF9B62;
     `}
 `;
+
+export const Add = styled.img`
+    cursor: pointer;
+`;

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import * as _ from './style';
 import '../../../App.css';
@@ -10,6 +11,7 @@ const ITEMS_PER_PAGE = 10;
 
 export default function Notice() {
     const [search, setSearch] = useState('');
+    const navigate = useNavigate();
     const [page, setPage] = useState(1);
 
     const filtered = data.filter(item =>
@@ -43,7 +45,12 @@ export default function Notice() {
                         }}
                     />
                 </_.SearchBar>
-                <img src={icons.Add} alt='Add' />
+                <_.Add
+                    src={icons.Add}
+                    alt="Add"
+                    onClick={() => navigate('/create-notice')}
+                    />
+
             </_.Wrapper>
 
             {paginated.map(item => (
