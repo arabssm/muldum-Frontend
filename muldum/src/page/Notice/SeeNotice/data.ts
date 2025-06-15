@@ -1,5 +1,5 @@
-import Search from '../../assets/icon/Search.svg';
-import Add from '../../assets/icon/Add.svg';
+import Search from '../../../assets/icon/Search.svg';
+import Add from '../../../assets/icon/Add.svg';
 
 export const icons = {
     Search,

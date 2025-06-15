@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as _ from './style';
-import '../../App.css';
+import '../../../App.css';
 import data, { icons } from './data';
 import Box from './Box';
 import NavBar from '../../../components/NavBar/NavBar';
