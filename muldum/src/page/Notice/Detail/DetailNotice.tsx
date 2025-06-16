@@ -5,7 +5,7 @@ import data from './data';
 import type { Notice } from './data';
 import NavBar from '../../../components/NavBar/NavBar';
 import Notfound from '../../../components/NotFound/NotFound';
-import DeleteModal from '../../../components/Modal/DeleteModal';
+import DeleteModal from '../../../components/Modal/Delete/DeleteModal';
 
 export default function NoticeDetail() {
     const { id } = useParams<{ id: string }>();
