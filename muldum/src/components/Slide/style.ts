@@ -16,8 +16,8 @@ export const SlideWrapper = styled.div`
     width: 80%;
     height: 220px;
     overflow: hidden;
-    margin: 20px auto;
-    border-radius: 12px;
+    margin: 1% auto;
+    border-radius: 8px;
     color: #FFFFFF;
 `;
 
