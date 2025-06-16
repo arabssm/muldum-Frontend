@@ -6,6 +6,7 @@ export const Container = styled.div`
     justify-content: center;
     width: 100%;
     height: 90vh;
+    margin-left: 10%;
     text-align: center;
 `;
 

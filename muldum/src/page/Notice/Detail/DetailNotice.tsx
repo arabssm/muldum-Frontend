@@ -3,13 +3,14 @@ import * as _ from './style';
 import data from './data';
 import type { Notice } from './data';
 import NavBar from '../../../components/NavBar/NavBar';
+import Notfound from '../../../components/NotFound/NotFound';
 
 export default function NoticeDetail() {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const notice: Notice | undefined = data.find(item => item.idx === Number(id));
 
-    if (!notice) return <div>공지사항을 찾을 수 없습니다.</div>;
+    if (!notice) return <Notfound />;
 
     return (
         <_.Container>
