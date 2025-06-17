@@ -1,12 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import * as _ from './style';
-import data from './data';
-import type { Notice } from './data';
-import NavBar from '../../../components/NavBar/NavBar';
-import Notfound from '../../../components/NotFound/NotFound';
-import DeleteModal from '../../../components/Modal/Delete/DeleteModal';
-import ConfirmDeleteModal from '../../../components/Modal/ConfirmDelete/ConfirmDelete';
+import data from '../data';
+import type { Notice } from '../data';
+import NavBar from '../../../../components/NavBar/NavBar';
+import Notfound from '../../../../components/NotFound/NotFound';
+import DeleteModal from '../../../../components/Modal/Delete/DeleteModal';
+import ConfirmDeleteModal from '../../../../components/Modal/ConfirmDelete/ConfirmDelete';
 
 export default function NoticeDetail() {
     const { id } = useParams<{ id: string }>();

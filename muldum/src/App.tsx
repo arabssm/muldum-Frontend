@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './page/Main/Main';
 import Notice from './page/Notice/Notice/Notice';
-import DetailNotice from './page/Notice/Detail/DetailNotice';
+import DetailNotice from './page/Notice/Detail/Examine/DetailNotice';
 import CreateNotice from './page/Notice/Create/CreateNotice';
 import NotFound from './components/NotFound/NotFound';
-import NoticeEdit from './page/Notice/Detail/NoticeEdit';
+import NoticeEdit from './page/Notice/Detail/Edit/NoticeEdit';
 
 export default function App() {
   return (
