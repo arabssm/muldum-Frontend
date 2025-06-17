@@ -1,5 +1,5 @@
 import * as _ from './style';
-import '../../App.css';
+import '../../../App.css';
 
 interface Props {
     onCancel: () => void;

@@ -12,3 +12,39 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 `;
+
+export const Modal = styled.div`
+    width: 28%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 3% 0;
+    text-align: center;
+`;
+
+export const TextArea = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+`;
+
+export const Title = styled.div`
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1d1d1d;
+`;
+
+export const SubTitle = styled.div`
+    font-size: 1.1rem;
+    color: #b2b2b2;
+    margin: 1%;
+`;
+
+export const counts = styled.div`
+    font-size: 1.2rem;
+    color: #b2b2b2;
+`;
+
+export const CheckIcon = styled.img`
+    width: 20%;
+    margin-bottom: 3%;
+`;

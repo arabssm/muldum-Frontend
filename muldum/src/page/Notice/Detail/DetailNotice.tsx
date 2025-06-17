@@ -6,17 +6,25 @@ import type { Notice } from './data';
 import NavBar from '../../../components/NavBar/NavBar';
 import Notfound from '../../../components/NotFound/NotFound';
 import DeleteModal from '../../../components/Modal/Delete/DeleteModal';
+import ConfirmDeleteModal from '../../../components/Modal/ConfirmDelete/ConfirmDelete';
 
 export default function NoticeDetail() {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
+    const [showConfirmModal, setShowConfirmModal] = useState(false); // 추가
     const notice: Notice | undefined = data.find(item => item.idx === Number(id));
 
     if (!notice) return <Notfound />;
 
     const handleDelete = () => {
-        navigate('/notice');
+        setShowModal(false);
+        setShowConfirmModal(true);
+
+        setTimeout(() => {
+            setShowConfirmModal(false);
+            navigate('/notice');
+        }, 5000);
     };
 
     return (
@@ -43,11 +51,19 @@ export default function NoticeDetail() {
                 </_.Content>
                 <_.BackButton onClick={() => navigate(-1)}>이전</_.BackButton>
             </_.Wrapper>
+
             {showModal && (
                 <DeleteModal
                     onCancel={() => setShowModal(false)}
                     onConfirm={handleDelete}
                 />
+            )}
+
+            {showConfirmModal && (
+                <ConfirmDeleteModal onClose={() => {
+                    setShowConfirmModal(false);
+                    navigate('/notice');
+                }} />
             )}
         </_.Container>
     );
