@@ -12,7 +12,7 @@ export default function NoticeDetail() {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
-    const [showConfirmModal, setShowConfirmModal] = useState(false); // 추가
+    const [showConfirmModal, setShowConfirmModal] = useState(false);
     const notice: Notice | undefined = data.find(item => item.idx === Number(id));
 
     if (!notice) return <Notfound />;
@@ -39,7 +39,7 @@ export default function NoticeDetail() {
                     </_.AdditionLeft>
                     <_.ButtonGroup>
                         <button onClick={() => setShowModal(true)}>삭제하기</button>
-                        <button>수정하기</button>
+                        <button onClick={() => navigate(`/notice/edit/${notice.idx}`)}>수정하기</button>
                     </_.ButtonGroup>
                 </_.AdditionRow>
                 <_.Image src={notice.image} alt="notice" />
