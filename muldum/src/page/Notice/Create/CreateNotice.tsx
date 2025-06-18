@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
 import NavBar from '../../../components/NavBar/NavBar';
 import EditSuccess from '../../../components/Modal/Notice/CreateNotice';
 import data from '../Detail/data';
-
 export interface Notice {
     idx: number;
     title: string;
@@ -29,6 +28,14 @@ export default function CreateNotice() {
         author: '',
     });
     const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        const saved = localStorage.getItem('notices');
+        if (saved) {
+            const savedNotices: Notice[] = JSON.parse(saved);
+            data.splice(0, data.length, ...savedNotices);
+        }
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -79,7 +86,13 @@ export default function CreateNotice() {
     };
 
     const handleSubmit = () => {
-        data.push(notice);
+        const saved = localStorage.getItem('notices');
+        const current: Notice[] = saved ? JSON.parse(saved) : [];
+        
+        const updated = [notice, ...current];
+        localStorage.setItem('notices', JSON.stringify(updated));
+        data.splice(0, data.length, ...updated);
+
         setShowModal(true);
     };
 
