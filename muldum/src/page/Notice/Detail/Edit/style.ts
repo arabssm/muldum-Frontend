@@ -92,6 +92,10 @@ export const Textarea = styled.textarea`
     cursor: pointer;
     outline: none;
     font-family: 'Paperlogy';
+
+    ::placeholder{
+        color: #807F7E;
+    }
 `;
 
 export const TagButton = styled.button`
