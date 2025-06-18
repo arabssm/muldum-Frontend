@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import CheckIcon from '../../../assets/modal/check.svg'
-import * as _ from './style';
+import * as _ from '../style';
 import '../../../App.css';
+
 interface ConfirmDeleteModalProps {
     onClose: () => void;
 }

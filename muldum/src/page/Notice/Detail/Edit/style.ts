@@ -107,3 +107,7 @@ export const TagButton = styled.button`
         color: #1D1D1D;
     }
 `;
+
+export const ChangeImg = styled.input`
+    display: none;
+`;
