@@ -26,33 +26,12 @@ export const BoxGroup = styled.div`
     width: 90%;
 `;
 
-export const Text = styled.div`
-    padding: 1.3%;
-    border: 1px solid #D1D1D1;
-    border-radius: 4px;
-    color: #1D1D1D;
-    font-size: 1rem;
-    margin-bottom: 2%;
-`;
-
 export const TagBox = styled.div`
     padding: 1.5%;
     font-size: 1.3rem;
     color: #909090;
     border-bottom: 1px solid #D1D1D1;
-    margin-bottom: 2%;
-`;
-
-export const Content = styled.div`
-    display: flex;
-    padding: 1.5%;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    padding: 1.3%;
-    border: 1px solid #D1D1D1;
-    border-radius: 4px;
-    color: #1D1D1D;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
 `;
 
 export const Picture = styled.div`
@@ -81,5 +60,36 @@ export const EnrollButton = styled.button`
     color: #fff;
     font-size: 1.2rem;
     cursor: pointer;
+    font-family: 'Paperlogy';
+`;
+
+export const TextInput = styled.input`
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    padding: 1.3% 2%;
+    font-size: 1rem;
+    margin-bottom: 1.5%;
+    border-radius: 4px;
+    border: 1px solid #D1D1D1;
+    color: #1D1D1D;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Paperlogy';
+`;
+
+export const Textarea = styled.textarea`
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    height: 20vh;
+    padding: 1.3% 2%;
+    font-size: 1rem;
+    margin-bottom: 3%;
+    border-radius: 4px;
+    border: 1px solid #D1D1D1;
+    color: #1D1D1D;
+    cursor: pointer;
+    outline: none;
     font-family: 'Paperlogy';
 `;

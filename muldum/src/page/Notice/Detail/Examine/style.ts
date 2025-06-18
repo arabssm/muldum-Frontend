@@ -50,10 +50,11 @@ export const Content = styled.div`
 export const BackButton = styled.button`
     margin-top: 2%;
     padding: 0.5% 1%;
+    font-size: 0.8rem;
     background-color: #FF9B62;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 24px;
     cursor: pointer;
     align-self: flex-start;
     font-family: 'Paperlogy';
