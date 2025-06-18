@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-
 interface ActiveProps {
     isActive?: boolean;
 }

@@ -16,8 +16,8 @@ export const SlideWrapper = styled.div`
     width: 80%;
     height: 220px;
     overflow: hidden;
-    margin: 20px auto;
-    border-radius: 12px;
+    margin: 1% auto;
+    border-radius: 8px;
     color: #FFFFFF;
 `;
 
@@ -38,8 +38,8 @@ export const Legendimg = styled.img`
 export const Title = styled.div`
     position: absolute;
     font-size: 2.5rem;
-    font-weight: bold;
-    top: 15%;
+    font-weight: 500;
+    top: 20%;
     left: 4%;
     width: 400px;
 `;
@@ -47,15 +47,17 @@ export const Title = styled.div`
 export const SubTitle = styled.div`
     font-size: 1.5rem;
     position: absolute;
+    font-weight: 400;
     left: 4%;
-    top: 69%;
+    top: 67%;
 `;
 
 export const Date = styled.div`
     font-size: 1.5rem;
+    font-weight: 400;
     position: absolute;
     left: 4%;
-    top: 57%;
+    top: 52%;
 `;
 
 export const Ddate = styled.div`
@@ -63,13 +65,11 @@ export const Ddate = styled.div`
     font-size: 5rem; 
     font-weight: 600;
     top: 27%;
-    left: 70%;
-    width: auto;
-    border-radius: 8px;
+    left: 74%;
 `;
 
 export const Index = styled.div`
     position: absolute;
-    left: 97%;
-    top: 85%;
+    left: 96%;
+    top: 84%;
 `;

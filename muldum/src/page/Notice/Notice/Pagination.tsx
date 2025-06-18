@@ -1,5 +1,4 @@
 import { PaginationWrapper, PageButton } from './style';
-
 interface PaginationProps {
     currentPage: number;
     totalPages: number;
