@@ -5,6 +5,8 @@ import DetailNotice from './page/Notice/Detail/Examine/DetailNotice';
 import CreateNotice from './page/Notice/Create/CreateNotice';
 import NotFound from './components/NotFound/NotFound';
 import NoticeEdit from './page/Notice/Detail/Edit/NoticeEdit';
+import DetailNotice from './page/Notice/Detail/DetailNotice';
+import CreateNotice from './page/Notice/Create/CreateNotice';
 
 export default function App() {
   return (
