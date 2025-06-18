@@ -45,6 +45,8 @@ export const Content = styled.div`
     margin-top: 1%;
     line-height: 1;
     font-size: 1rem;
+    width: 90%;
+    line-height: 1.5;
 `;
 
 export const BackButton = styled.button`

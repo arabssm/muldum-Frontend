@@ -93,3 +93,17 @@ export const Textarea = styled.textarea`
     outline: none;
     font-family: 'Paperlogy';
 `;
+
+export const TagButton = styled.button`
+    width: 5%;
+    font-size: 1rem;
+    color: #909090;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'Paperlogy';
+
+    :hover {
+        color: #1D1D1D;
+    }
+`;

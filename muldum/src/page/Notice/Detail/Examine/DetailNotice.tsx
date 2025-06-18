@@ -7,6 +7,7 @@ import NavBar from '../../../../components/NavBar/NavBar';
 import Notfound from '../../../../components/NotFound/NotFound';
 import DeleteModal from '../../../../components/Modal/Delete/DeleteModal';
 import ConfirmDeleteModal from '../../../../components/Modal/ConfirmDelete/ConfirmDelete';
+import makeDocument from '../makeDocument';
 
 export default function NoticeDetail() {
     const { id } = useParams<{ id: string }>();
@@ -45,9 +46,7 @@ export default function NoticeDetail() {
                 <_.Image src={notice.image} alt="notice" />
                 <_.ImageCaption>{notice.imageCaption}</_.ImageCaption>
                 <_.Content>
-                    {notice.content.map((paragraph: string, index: number) => (
-                        <p key={index}>{paragraph}</p>
-                    ))}
+                    {makeDocument(notice.content.join('\n'))}
                 </_.Content>
                 <_.BackButton onClick={() => navigate(-1)}>이전</_.BackButton>
             </_.Wrapper>
