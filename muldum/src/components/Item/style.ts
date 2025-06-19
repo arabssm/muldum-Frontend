@@ -69,7 +69,7 @@ export const Deadline = styled.button`
 export const UpGroup = styled.div`
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     gap: 80%;
     margin-bottom: 3%;
 `;
@@ -78,7 +78,7 @@ export const DownGroup = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 100%;
 `;
 
 export const LastGroup = styled.div`
@@ -86,7 +86,7 @@ export const LastGroup = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 2%;
+    margin-top: 3%;
 `;
 
 export const Icon = styled.img`
