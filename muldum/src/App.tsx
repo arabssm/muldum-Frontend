@@ -5,6 +5,7 @@ import DetailNotice from './page/Notice/Detail/Examine/DetailNotice';
 import CreateNotice from './page/Notice/Create/CreateNotice';
 import NotFound from './components/NotFound/NotFound';
 import NoticeEdit from './page/Notice/Detail/Edit/NoticeEdit';
+import ProjectChoice from './page/Item/ProjectChoice';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/notice/:id" element={<DetailNotice />} />
         <Route path="/create-notice" element={<CreateNotice />} />
         <Route path="/notice/edit/:id" element={<NoticeEdit />} />
+        <Route path="/project-choice" element={<ProjectChoice />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

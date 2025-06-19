@@ -18,7 +18,7 @@ export default function Menu() {
         </_.MenuArea>
 
         <_.MenuArea>
-            <_.Text onClick={() => navigate('/project-choice')}>물품 신청 보러가기</_.Text>
+            <_.Text>물품 신청 보러가기</_.Text>
             <_.Shortcut>바로가기 ＞</_.Shortcut>
         </_.MenuArea>
 
