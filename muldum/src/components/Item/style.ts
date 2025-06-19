@@ -5,6 +5,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
     gap: 2%;
     width: 100%;
+    cursor: pointer;
 `;
 
 export const MenuArea = styled.div`
@@ -63,6 +64,7 @@ export const Deadline = styled.button`
     color: #B2B2B2;
     border: none;
     background-color: transparent;
+    cursor: pointer;
     font-family: 'Paperlogy';
 `;
 

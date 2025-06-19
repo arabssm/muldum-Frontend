@@ -9,7 +9,7 @@ export default function ProjectChoice(){
         <_.Container>
             <NavBar />
             <_.Title>물품 승인 프로젝트 선택</_.Title>
-            <_.Subtitle>물품을 승인할 프로젝트를 선택해 주세요</_.Subtitle>
+            <_.Subtitle>물품을 승인할 프로젝트를 선택해주세요</_.Subtitle>
             <Menu />
         </_.Container>
     )
