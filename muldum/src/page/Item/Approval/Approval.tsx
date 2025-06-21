@@ -2,8 +2,9 @@ import { useState } from 'react';
 import * as _ from './style';
 import NavBar from '@_navbar/NavBar';
 import '@_styles';
+import ApprovalList from '@_components/Item/List/ApprovalList';
 
-const clubs = ['아라', 'ODYSSEY', '인서트', '솔빗', 'Tera', '하루', 'Pluto', 'PAPADOX', 'Echo'];
+const clubs = ['아라', 'ODYSSEY', '인서트', '솔빗', 'Tera', '하루', 'Pluto', 'PARADOX', 'Echo'];
 
 export default function Approval() {
     const [filter, setFilter] = useState<'가능' | '불가능'>('가능');
@@ -44,10 +45,13 @@ export default function Approval() {
                     </_.ClubName>
                 ))}
             </_.ClubArea>
+            <_.AddonsArea>
+                    <_.Addons>다운로드</_.Addons>
+                    <_.Addons>전체선택</_.Addons>
+            </_.AddonsArea>
             {selectedClub && (
-                <_.DetailArea>
-                </_.DetailArea>
-            )}
+                <ApprovalList />
+                )}
         </_.Container>
     );
 }

@@ -1,5 +1,5 @@
 import * as _ from './style';
-import Menu from '@_menu/Menu';
+import Menu from '@_components/Menu/Menu';
 import Slider from '@_components/Slide/Slide';
 import NavBar from '@_navbar/NavBar';
 import '@_styles';

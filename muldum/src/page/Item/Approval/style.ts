@@ -29,7 +29,7 @@ export const ButtonArea = styled.div`
     border: none;
     border-bottom: 1px solid #B2B2B2;
     gap: 2rem;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
 `;
 
 export const ApprovalButton = styled.button<{ active?: boolean }>`
@@ -48,7 +48,7 @@ export const ClubArea = styled.div`
     width: 90%;
     border: none;
     gap: 1.3rem;
-    margin-bottom: 2%;
+    margin-bottom: 2.5%;
 `;
 
 export const ClubName = styled.div<{ selected?: boolean }>`
@@ -64,5 +64,26 @@ export const DetailArea = styled.div`
     margin-top: 2rem;
     padding: 1.5rem;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 4px;
+`;
+
+export const AddonsArea = styled.div`
+    display: flex;
+    justify-content: right;
+    width: 90%;
+    gap: 1.3rem;
+    margin-bottom: 3%;
+`;
+
+export const Addons = styled.button`
+    font-size: 1.2rem;
+    color: #B2B2B2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'Paperlogy';
+
+    :hover {
+        color: #FF9B62;
+    }
 `;
