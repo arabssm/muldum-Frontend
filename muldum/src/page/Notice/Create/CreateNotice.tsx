@@ -1,6 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
+import NavBar from '@_navbar/NavBar';
+import '@_styles';
+
+export default function CreateNotice(){
+return(
+    <_.Container>
+        <NavBar />
+    </_.Container>
+);}
+
 import NavBar from '../../../components/NavBar/NavBar';
 import EditSuccess from '../../../components/Modal/Notice/CreateNotice';
 import data from '../Detail/data';

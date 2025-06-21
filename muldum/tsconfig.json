@@ -1,7 +1,21 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@_assets/*": ["src/assets/*"],
+      "@_modalImages/*": ["src/assets/modal/*"],
+      "@_components/*": ["src/components/*"],
+      "@_menu/*": ["src/components/Menu/*"],
+      "@_modal/*": ["src/components/Modal/*"],
+      "@_navbar/*": ["src/components/NavBar/*"],
+      "@_notfound/*": ["src/components/NotFound/*"],
+      "@_pages/*": ["src/page/*"],
+      "@_main/*": ["src/page/Main/*"],
+      "@_notice/*": ["src/page/Notice/*"],
+      "@_styles/*": ["src/App.css"]
+    },
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

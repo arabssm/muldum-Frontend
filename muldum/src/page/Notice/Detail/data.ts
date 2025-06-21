@@ -1,4 +1,4 @@
-import Img from '../../../assets/Img.svg'
+import Img from '@_assets/Img.svg';
 export interface Notice {
     idx: number;
     title: string;

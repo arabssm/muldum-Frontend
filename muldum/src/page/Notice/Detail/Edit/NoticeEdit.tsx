@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import * as _ from './style';
-import NavBar from '../../../../components/NavBar/NavBar';
-import EditSuccess from '../../../../components/Modal/Notice/EditSuccess';
+import EditSuccess from '@_modal/Notice/EditSuccess';
 import data from '../data';
+import NavBar from '@_navbar/NavBar';
+import '@_styles';
+
 export interface Notice {
     idx: number;
     title: string;
