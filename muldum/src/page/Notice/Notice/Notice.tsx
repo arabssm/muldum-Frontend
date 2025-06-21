@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as _ from './style';
 import '@_styles';
 import data, { icons } from './data';
@@ -8,65 +8,76 @@ import NavBar from '@_navbar/NavBar';
 import Pagination from './Pagination'
 
 const ITEMS_PER_PAGE = 10;
+=======
+import '../../../App.css';
+import { icons } from './data';
+import Box from './Box';
+import NavBar from '../../../components/NavBar/NavBar';
+import Pagination from './Pagination';
+interface NoticeItem {
+    idx: number;
+    title: string;
+    date: string;
+}
 
 export default function Notice() {
+    const [notices, setNotices] = useState<NoticeItem[]>([]);
     const [search, setSearch] = useState('');
-    const navigate = useNavigate();
     const [page, setPage] = useState(1);
+    const navigate = useNavigate();
 
-    const filtered = data.filter(item =>
+    useEffect(() => {
+        const saved = localStorage.getItem('notices');
+        if (saved) {
+        setNotices(JSON.parse(saved));
+        }
+    }, []);
+
+    const filtered = notices.filter(item =>
         item.title.toLowerCase().includes(search.toLowerCase())
     );
 
-    const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
-    const startIdx = (page - 1) * ITEMS_PER_PAGE;
-    const paginated = filtered.slice(startIdx, startIdx + ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(filtered.length / 10);
+    const startIdx = (page - 1) * 10;
+    const paginated = filtered.slice(startIdx, startIdx + 10);
 
     const handlePageChange = (newPage: number) => {
         if (newPage >= 1 && newPage <= totalPages) {
-            setPage(newPage);
+        setPage(newPage);
         }
     };
 
     return (
         <_.Container>
-            <NavBar />
-            <_.Wrapper>
-                <_.PageTitle>공지사항</_.PageTitle>
-                <_.SearchBar>
-                    <img src={icons.Search} alt='Search' />
-                    <_.SearchInput
-                        type='text'
-                        placeholder='공지사항 검색'
-                        value={search}
-                        onChange={e => {
-                            setSearch(e.target.value);
-                            setPage(1);
-                        }}
-                    />
-                </_.SearchBar>
-                <_.Add
-                    src={icons.Add}
-                    alt="Add"
-                    onClick={() => navigate('/create-notice')}
-                    />
-
-            </_.Wrapper>
-
-            {paginated.map(item => (
-                <Box
-                    key={item.idx}
-                    idx={item.idx}
-                    title={item.title}
-                    date={item.date}
-                />
-            ))}
-
-            <Pagination
-                currentPage={page}
-                totalPages={totalPages}
-                onPageChange={handlePageChange}
+        <NavBar />
+        <_.Wrapper>
+            <_.PageTitle>공지사항</_.PageTitle>
+            <_.SearchBar>
+            <img src={icons.Search} alt="Search" />
+            <_.SearchInput
+                type="text"
+                placeholder="공지사항 검색"
+                value={search}
+                onChange={e => {
+                setSearch(e.target.value);
+                setPage(1);
+                }}
             />
+            </_.SearchBar>
+            <_.Add
+            src={icons.Add}
+            alt="Add"
+            onClick={() => navigate('/create-notice')}
+            />
+        </_.Wrapper>
+        {paginated.map(item => (
+            <Box key={item.idx} idx={item.idx} title={item.title} date={item.date} />
+        ))}
+        <Pagination
+            currentPage={page}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+        />
         </_.Container>
     );
 }
