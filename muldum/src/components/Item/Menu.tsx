@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
 import '@_styles';
 import specialty from '@_assets/item/specialty.svg';
@@ -6,10 +7,11 @@ import net from '@_assets/item/net.svg';
 import congrats from '@_assets/item/congrats.svg';
 
 export default function Menu() {
+    const navigate = useNavigate();
 
 return (
     <_.Container>
-    <_.MenuArea>
+    <_.MenuArea onClick={() => navigate('/project-approval')}>
         <_.UpGroup>
             <_.Icon src= {specialty} alt='specialty'/>
             <_.Dday>D-30</_.Dday>

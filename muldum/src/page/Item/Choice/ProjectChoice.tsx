@@ -4,7 +4,6 @@ import Menu from '@_components/Item/Menu';
 import '@_styles';
 
 export default function ProjectChoice(){
-
     return (
         <_.Container>
             <NavBar />
