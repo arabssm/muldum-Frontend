@@ -5,6 +5,7 @@ import EditSuccess from '@_modal/Notice/EditSuccess';
 import data from '../data';
 import NavBar from '@_navbar/NavBar';
 import '@_styles';
+
 export interface Notice {
     idx: number;
     title: string;
