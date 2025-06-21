@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import * as _ from './style';
-import '../../../App.css';
+import '@_styles';
 import data, { icons } from './data';
 import Box from './Box';
-import NavBar from '../../../components/NavBar/NavBar';
+import NavBar from '@_navbar/NavBar';
 import Pagination from './Pagination'
 
 const ITEMS_PER_PAGE = 10;

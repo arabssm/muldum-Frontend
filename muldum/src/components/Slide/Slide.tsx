@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import * as _ from './style';
 import sliderSettings from './Setting';
 import Data from './data';
-import '../../App.css';
+import '@_styles';
 
 export default function SliderComponent() {
 return (

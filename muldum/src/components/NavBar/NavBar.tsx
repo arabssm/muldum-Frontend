@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { IconMenu } from './IconMenu';
 import * as _ from './style';
-import '../../App.css';
+import '@_styles';
 
 export default function NavBar() {
 const navigate = useNavigate();

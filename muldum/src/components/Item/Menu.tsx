@@ -1,9 +1,9 @@
 import * as _ from './style';
-import '../../App.css';
-import specialty from '../../assets/item/specialty.svg';
-import autonomy from '../../assets/item/autonomy.svg';
-import net from '../../assets/item/net.svg';
-import congrats from '../../assets/item/congrats.svg';
+import '@_styles';
+import specialty from '@_assets/item/specialty.svg';
+import autonomy from '@_assets/item/autonomy.svg';
+import net from '@_assets/item/net.svg';
+import congrats from '@_assets/item/congrats.svg';
 
 export default function Menu() {
 

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
-import '../../App.css';
-import NavBar from '../NavBar/NavBar';
+import '@_styles';
+import NavBar from '@_navbar/NavBar';
 
 export default function Notfound() {
 const navigate = useNavigate();

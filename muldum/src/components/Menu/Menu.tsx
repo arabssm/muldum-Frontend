@@ -1,5 +1,5 @@
 import * as _ from './style';
-import '../../App.css';
+import '@_styles';
 import { useNavigate } from 'react-router-dom';
 
 export default function Menu() {

@@ -1,8 +1,8 @@
 import * as _ from './style';
-import NavBar from '../../components/NavBar/NavBar';
-import Menu from '../../components/Menu/Menu';
-import Slider from '../../components/Slide/Slide'
-import '../../App.css';
+import Menu from '@_menu/Menu';
+import Slider from '@_components/Slide/Slide';
+import NavBar from '@_navbar/NavBar';
+import '@_styles';
 
 export default function Main(){
 return (

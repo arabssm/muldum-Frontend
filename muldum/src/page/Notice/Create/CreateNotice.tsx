@@ -1,6 +1,6 @@
 import * as _ from './style';
-import '../../../App.css';
-import NavBar from '../../../components/NavBar/NavBar';
+import NavBar from '@_navbar/NavBar';
+import '@_styles';
 
 export default function CreateNotice(){
 return(
