@@ -87,3 +87,35 @@ export const Addons = styled.button`
         color: #FF9B62;
     }
 `;
+
+export const ButtonGroup = styled.div`
+    display: flex;
+    justify-content: right;
+    width: 90%;
+    gap: 1.3rem;
+    margin-bottom: 3%;
+`;
+
+export const ApplyButton = styled.button`
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    width: 10%;
+    border-radius: 24px;
+    background-color: #FF9B62;
+    border: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Paperlogy';
+    margin-top: 4%;
+`;
+
+export const Null = styled.div`
+    display: flex;
+    width: 82%;
+    padding: 3% 4%;
+    background-color: #FAFAFA;
+    font-size:  1.3rem;
+    color: #545454;
+`;

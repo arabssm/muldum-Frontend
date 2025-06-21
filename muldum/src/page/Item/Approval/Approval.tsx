@@ -19,7 +19,7 @@ export default function Approval() {
         setSelectedClub(club === selectedClub ? null : club);
     };
 
-    const filteredClubs = clubs; 
+    const filteredClubs = clubs;
 
     return (
         <_.Container>
@@ -46,12 +46,20 @@ export default function Approval() {
                 ))}
             </_.ClubArea>
             <_.AddonsArea>
-                    <_.Addons>다운로드</_.Addons>
-                    <_.Addons>전체선택</_.Addons>
+                <_.Addons>다운로드</_.Addons>
+                <_.Addons>전체선택</_.Addons>
             </_.AddonsArea>
-            {selectedClub && (
+            
+            {selectedClub ? (
                 <ApprovalList />
-                )}
+            ) : (
+                <_.Null>물품승인을 할 동아리를 선택해주세요</_.Null>
+            )}
+
+            <_.ButtonGroup>
+                <_.ApplyButton>승인하기</_.ApplyButton>
+                <_.ApplyButton>거절하기</_.ApplyButton>
+            </_.ButtonGroup>
         </_.Container>
     );
 }
