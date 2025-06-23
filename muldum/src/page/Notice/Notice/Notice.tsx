@@ -2,10 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as _ from './style';
 import '@_styles';
-import '../../../App.css';
 import { icons } from './data';
 import Box from './Box';
-import NavBar from '../../../components/NavBar/NavBar';
+import NavBar from '@_navbar/NavBar';
 import Pagination from './Pagination';
 interface NoticeItem {
     idx: number;
