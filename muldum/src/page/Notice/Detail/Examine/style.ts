@@ -47,12 +47,13 @@ export const Content = styled.div`
     font-size: 1rem;
     width: 90%;
     line-height: 1.5;
+
 `;
 
 export const BackButton = styled.button`
-    margin-top: 2%;
-    padding: 0.5% 1%;
-    font-size: 0.8rem;
+    margin-top: 5%;
+    padding: 1% 2%;
+    font-size: 1.1rem;
     background-color: #FF9B62;
     color: #fff;
     border: none;
