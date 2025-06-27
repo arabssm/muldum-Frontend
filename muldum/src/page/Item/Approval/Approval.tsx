@@ -4,7 +4,7 @@ import NavBar from '@_navbar/NavBar';
 import '@_styles';
 import ApprovalList from '@_components/Item/List/ApprovalList';
 
-const clubs = ['아라', 'ODYSSEY', '인서트', '솔빗', 'Tera', '하루', 'Pluto', 'PARADOX', 'Echo'];
+const clubs = ['아라', 'ODYSSEY', '인서트', '솔빗', 'Tera', '하로', 'Pluto', 'PARADOX', 'Echo', '팔레토', '온나미로'];
 
 export default function Approval() {
     const [filter, setFilter] = useState<'가능' | '불가능'>('가능');
@@ -58,7 +58,7 @@ export default function Approval() {
 
             <_.ButtonGroup>
                 <_.ApplyButton>승인하기</_.ApplyButton>
-                <_.ApplyButton>거절하기</_.ApplyButton>
+                <_.ApplyNobutton>거절하기</_.ApplyNobutton>
             </_.ButtonGroup>
         </_.Container>
     );

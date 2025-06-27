@@ -109,6 +109,30 @@ export const ApplyButton = styled.button`
     cursor: pointer;
     font-family: 'Paperlogy';
     margin-top: 4%;
+
+    :hover {
+        background-color: #EB712B;
+    }
+`;
+
+export const ApplyNobutton = styled.button`
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    width: 10%;
+    border-radius: 24px;
+    border: 1px solid #FF9B62;
+    color: #FF9B62;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Paperlogy';
+    margin-top: 4%;
+
+    :hover{
+        background-color: #FF9B62;
+        color: #fff;
+    }
 `;
 
 export const Null = styled.div`
