@@ -1,14 +1,6 @@
 import * as _ from './style';
 import NavBar from '@_components/NavBar/NavBar';
-
-const data = [
-  'AMD 라이젠7 5세대 7800X3D 라파엘 멀티팩 정품 국내정식 유통제품',
-  'AMD 라이젠7 5세대 7800X3D 라파엘 멀티팩 정품 국내정식 유통제품',
-  'AMD 라이젠7 5세대 7800X3D 라파엘 멀티팩 정품 국내정식 유통제품',
-  'AMD 라이젠7 5세대 7800X3D 라파엘 멀티팩 정품 국내정식 유통제품',
-  'AMD 라이젠7 5세대 7800X3D 라파엘 멀티팩 정품 국내정식 유통제품',
-  'AMD 라이젠7 5세대 7800X3D 라파엘 멀티팩 정품 국내정식 유통제품',
-];
+import data from './data';
 
 export default function ApprovalList() {
   return (

@@ -3,8 +3,7 @@ import * as _ from './style';
 import NavBar from '@_navbar/NavBar';
 import '@_styles';
 import ApprovalList from '@_components/Item/List/ApprovalList';
-
-const clubs = ['아라', 'ODYSSEY', '인서트', '솔빗', 'Tera', '하로', 'Pluto', 'PARADOX', 'Echo', '팔레토', '온나미로'];
+import CLUBS from './ClubList';
 
 export default function Approval() {
     const [filter, setFilter] = useState<'가능' | '불가능'>('가능');
@@ -19,7 +18,7 @@ export default function Approval() {
         setSelectedClub(club === selectedClub ? null : club);
     };
 
-    const filteredClubs = clubs;
+    const filteredClubs = CLUBS;
 
     return (
         <_.Container>

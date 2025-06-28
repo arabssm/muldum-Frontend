@@ -5,17 +5,7 @@ import EditSuccess from '@_modal/Notice/EditSuccess';
 import data from '../data';
 import NavBar from '@_navbar/NavBar';
 import '@_styles';
-
-export interface Notice {
-    idx: number;
-    title: string;
-    date: string;
-    formattedDate: string;
-    image: string;
-    imageCaption: string;
-    content: string[];
-    author: string;
-}
+import { Notice } from './type';
 
 export default function NoticeEdit() {
     const { id } = useParams<{ id: string }>();
