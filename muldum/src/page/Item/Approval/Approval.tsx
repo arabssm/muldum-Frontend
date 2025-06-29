@@ -12,10 +12,16 @@ export default function Approval() {
     const [filter, setFilter] = useState<'가능' | '불가능'>('가능');
     const [selectedClub, setSelectedClub] = useState<string | null>(null);
     const [rejectReason, setRejectReason] = useState<string>('구입처를 잘못 입력한 물품');
+    const [selectAll, setSelectAll] = useState(false);
 
     const handleFilter = (type: '가능' | '불가능') => {
         setFilter(type);
         setSelectedClub(null);
+        setSelectAll(false);
+    };
+
+    const handleSelectAll = () => {
+        setSelectAll((prev) => !prev);
     };
 
     return (
@@ -34,11 +40,13 @@ export default function Approval() {
                         setSelectedClub={setSelectedClub} 
                     />
                     <_.AddonsArea>
+                        <_.Addons onClick={handleSelectAll}>
+                            {selectAll ? '전체해제' : '전체선택'}
+                        </_.Addons>
                         <_.Addons>다운로드</_.Addons>
-                        <_.Addons>전체선택</_.Addons>
                     </_.AddonsArea>
                     {selectedClub ? (
-                        <ApprovalList />
+                        <ApprovalList selectAll={selectAll} />
                     ) : (
                         <_.Null>물품승인을 할 동아리를 선택해주세요</_.Null>
                     )}
@@ -47,10 +55,12 @@ export default function Approval() {
                 <>
                     <LongShot rejectReason={rejectReason} setRejectReason={setRejectReason} />
                     <_.AddonsArea>
-                        <_.Addons>다운로드</_.Addons>
+                        <_.Addons onClick={handleSelectAll}>
+                            {selectAll ? '전체해제' : '전체선택'}
+                        </_.Addons>
                         <_.Addons>전체선택</_.Addons>
                     </_.AddonsArea>
-                    <ApprovalList />
+                    <ApprovalList selectAll={selectAll} />
                 </>
             )}
             <_.ButtonGroup>

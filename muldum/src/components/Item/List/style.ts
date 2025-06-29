@@ -20,12 +20,12 @@ export const ItemRow = styled.div`
   padding: 1rem;
 `;
 
-export const ItemIndex = styled.div`
+export const ItemIndex = styled.div<{ selected?: boolean }>`
   width: 3%;
   padding: 1%;
   border: none;
   border-right: 1px solid #B2B2B2;
-  color: #323232;
+  color: ${({ selected }) => (selected ? '#FF9B62' : '#323232')};
   font-weight: 500;
   font-size: 1rem;
   display: flex;
