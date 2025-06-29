@@ -1,9 +1,5 @@
 import { PaginationWrapper, PageButton } from './style';
-interface PaginationProps {
-    currentPage: number;
-    totalPages: number;
-    onPageChange: (page: number) => void;
-}
+import { PaginationProps } from './type';
 
 export default function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
     return (

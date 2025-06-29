@@ -1,10 +1,6 @@
 import * as _ from './style';
 import '@_styles';
-
-interface Props {
-onCancel: () => void;
-onConfirm: () => void;
-}
+import { Props } from './type'
 
 export default function DeleteModal({ onCancel, onConfirm }: Props) {
 return (

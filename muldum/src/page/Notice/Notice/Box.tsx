@@ -1,11 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
-
-interface BoxProps {
-    idx: number;
-    title: string;
-    date: string;
-}
+import { BoxProps } from './type';
 
 const formatDate = (iso: string) => {
     const d = new Date(iso);

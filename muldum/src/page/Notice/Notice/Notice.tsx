@@ -6,11 +6,7 @@ import { icons } from './data';
 import Box from './Box';
 import NavBar from '@_navbar/NavBar';
 import Pagination from './Pagination';
-interface NoticeItem {
-    idx: number;
-    title: string;
-    date: string;
-}
+import { NoticeItem } from './type';
 
 export default function Notice() {
     const [notices, setNotices] = useState<NoticeItem[]>([]);
