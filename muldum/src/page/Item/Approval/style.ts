@@ -143,3 +143,21 @@ export const Null = styled.div`
     font-size:  1.3rem;
     color: #545454;
 `;
+
+export const RejectReasonArea = styled.div`
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+`;
+
+export const RejectButton = styled.button<{ active: boolean }>`
+    background-color: ${({ active }) => (active ? '#FF9B62' : '#B2B2B2')};
+    color: ${({ active }) => (active ? '#fff' : '#fff')};
+    border: none;
+    border-radius: 4px;
+    padding: 1% 1.2%;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Paperlogy';
+`;
