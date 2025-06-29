@@ -1,6 +1,6 @@
 import * as _ from './style';
 import '@_styles';
-import  Props from './type';
+import { Props } from './type';
 
 const Reason = [
     '구입처를 잘못 입력한 물품',

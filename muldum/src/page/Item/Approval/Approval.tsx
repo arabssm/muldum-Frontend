@@ -5,6 +5,8 @@ import '@_styles';
 import ApprovalList from '@_components/Item/List/ApprovalList';
 import Clubs from './ClubList';
 import LongShot from './LongShot';
+import Filter from './Filter';
+import ClubSelector from './ClubSelector';
 
 export default function Approval() {
     const [filter, setFilter] = useState<'가능' | '불가능'>('가능');
@@ -16,38 +18,21 @@ export default function Approval() {
         setSelectedClub(null);
     };
 
-    const handleSelectClub = (club: string) => {
-        setSelectedClub(club === selectedClub ? null : club);
-    };
-
-    const filteredClubs = Clubs;
-
     return (
         <_.Container>
             <NavBar />
             <_.Title>전공동아리 물품 승인</_.Title>
             <_.Subtitle>학생들이 신청한 물품들을 확인해요</_.Subtitle>
-            <_.ButtonArea>
-                <_.ApprovalButton onClick={() => handleFilter('가능')} active={filter === '가능'}>
-                    승인 가능
-                </_.ApprovalButton>
-                <_.ApprovalButton onClick={() => handleFilter('불가능')} active={filter === '불가능'}>
-                    승인 불가능
-                </_.ApprovalButton>
-            </_.ButtonArea>
+
+            <Filter filter={filter} setFilter={handleFilter} />
+
             {filter === '가능' ? (
                 <>
-                    <_.ClubArea>
-                        {filteredClubs.map((club, i) => (
-                            <_.ClubName
-                                key={i}
-                                onClick={() => handleSelectClub(club)}
-                                selected={selectedClub === club}
-                            >
-                                {club}
-                            </_.ClubName>
-                        ))}
-                    </_.ClubArea>
+                    <ClubSelector 
+                        clubs={Clubs} 
+                        selectedClub={selectedClub} 
+                        setSelectedClub={setSelectedClub} 
+                    />
                     <_.AddonsArea>
                         <_.Addons>다운로드</_.Addons>
                         <_.Addons>전체선택</_.Addons>
@@ -60,10 +45,7 @@ export default function Approval() {
                 </>
             ) : (
                 <>
-                    <LongShot 
-                        rejectReason={rejectReason}
-                        setRejectReason={setRejectReason}
-                    />
+                    <LongShot rejectReason={rejectReason} setRejectReason={setRejectReason} />
                     <_.AddonsArea>
                         <_.Addons>다운로드</_.Addons>
                         <_.Addons>전체선택</_.Addons>
