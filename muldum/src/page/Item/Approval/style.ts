@@ -45,7 +45,7 @@ export const ApprovalButton = styled.button<{ active?: boolean }>`
 
 export const ClubArea = styled.div`
     display: flex;
-    width: 90%;
+    width: 100%;
     border: none;
     gap: 1.3rem;
     margin-bottom: 2.5%;
