@@ -10,6 +10,7 @@ const Clubs = [
     'Echo',
     '팔레토',
     '온나미로',
+    '바로'
 ];
 
 export default Clubs;
