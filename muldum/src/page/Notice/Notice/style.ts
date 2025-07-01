@@ -56,7 +56,6 @@ export const BoxContainer = styled.div`
     padding: 1.2% 1%;
     cursor: pointer;
     background-color: #fff;
-    border-radius: 8px;
 `;
 
 export const Left = styled.div`
