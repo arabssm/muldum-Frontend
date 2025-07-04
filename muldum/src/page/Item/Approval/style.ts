@@ -37,7 +37,7 @@ export const ApprovalButton = styled.button<{ active?: boolean }>`
     font-size: 1.2rem;
     border: none;
     background-color: transparent;
-    border-bottom: 3px solid ${({ active }) => (active ? '#FF9B62' : 'none')};
+    border-bottom: 0.2rem solid ${({ active }) => (active ? '#FF9B62' : 'none')};
     color: #1D1D1D;
     cursor: pointer;
     font-family: 'Paperlogy';
@@ -53,7 +53,7 @@ export const ClubArea = styled.div`
 
 export const ClubName = styled.div<{ selected?: boolean }>`
     padding: 0.7rem 1rem;
-    border: 1px solid ${({ selected }) => (selected ? '#FF9B62' : '#B2B2B2')};
+    border: 0.06rem solid ${({ selected }) => (selected ? '#FF9B62' : '#B2B2B2')};
     background-color: ${({ selected }) => (selected ? '#FFF5EF' : 'white')};
     border-radius: 4px;
     cursor: pointer;
@@ -64,7 +64,7 @@ export const DetailArea = styled.div`
     margin-top: 2rem;
     padding: 1.5rem;
     background-color: #f9f9f9;
-    border-radius: 4px;
+    border-radius: 0.3rem;
 `;
 
 export const AddonsArea = styled.div`
@@ -101,7 +101,7 @@ export const ApplyButton = styled.button`
     justify-content: center;
     padding: 1%;
     width: 10%;
-    border-radius: 24px;
+    border-radius: 2rem;
     background-color: #FF9B62;
     border: 0;
     color: #fff;
@@ -120,8 +120,8 @@ export const ApplyNobutton = styled.button`
     justify-content: center;
     padding: 1%;
     width: 10%;
-    border-radius: 24px;
-    border: 1px solid #FF9B62;
+    border-radius: 2rem;
+    border: 0.1rem solid #FF9B62;
     color: #FF9B62;
     background-color: transparent;
     font-size: 1.2rem;

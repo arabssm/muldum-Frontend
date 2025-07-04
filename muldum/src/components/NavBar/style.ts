@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-interface ActiveProps {
-    isActive?: boolean;
-}
+import type data from './type';
 
 export const MainArea = styled.div`
     position: fixed;
@@ -14,12 +12,12 @@ export const MainArea = styled.div`
     background-color: white;
 `;
 
-export const BaseTag = styled.div<ActiveProps>`
+export const BaseTag = styled.div<data>`
     display: flex;
     align-items: center;
     width: 100%;
     height: 6vh;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     cursor: pointer;
     background-color: ${({ isActive }) => (isActive ? '#FFF5EF' : 'transparent')};
 `;
@@ -42,7 +40,7 @@ export const Icon = styled.img`
     margin-left: 8%;
 `;
 
-export const Text = styled.div<ActiveProps>`
+export const Text = styled.div<data>`
     color: ${({ isActive }) => (isActive ? '#FF9B62' : '#545454')};
     margin-left: 4%;
 `;

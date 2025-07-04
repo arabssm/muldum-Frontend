@@ -14,7 +14,7 @@ export const MenuArea = styled.div`
     align-items: flex-start;
     width: 35%;
     background-color: #FAFAFA;
-    border-radius: 12px;
+    border-radius: 0.625rem;
     padding: 3% 6% 3% 3%;
     margin-bottom: 2%;
     cursor: pointer;

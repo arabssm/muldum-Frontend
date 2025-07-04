@@ -14,10 +14,10 @@ export const StyledSlider = styled(Slider)`
 export const SlideWrapper = styled.div`
     position: relative;
     width: 80%;
-    height: 220px;
+    height: 24vh;
     overflow: hidden;
     margin: 1% auto;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     color: #FFFFFF;
 `;
 
@@ -41,7 +41,7 @@ export const Title = styled.div`
     font-weight: 500;
     top: 20%;
     left: 4%;
-    width: 400px;
+    width: 100%;
 `;
 
 export const SubTitle = styled.div`

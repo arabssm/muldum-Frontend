@@ -40,8 +40,8 @@ export const Dday = styled.div`
     background-color: #FF9B62;
     padding: 1.5% 2%;
     width: 12%;
+    border-radius: 1rem;
     color: white;
-    border-radius: 24px;
     border: none;
     text-align: center;
 `;
