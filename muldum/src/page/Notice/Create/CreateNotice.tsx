@@ -1,24 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
 import NavBar from '@_components/NavBar/NavBar';
-import EditSuccess from '@_modal/Notice/EditSuccess'
+import EditSuccess from '@_modal/Notice/EditSuccess';
 import data from '../Detail/data';
 import '@_styles';
+import useNoticeState from './useNoticeState';
 import { Notice } from './type';
 
 export default function CreateNotice() {
     const navigate = useNavigate();
-    const [notice, setNotice] = useState<Notice>({
-        idx: Date.now(),
-        title: '',
-        date: '',
-        formattedDate: '',
-        image: '',
-        imageCaption: '',
-        content: [],
-        author: '',
-    });
+    const [notice, setNotice] = useNoticeState();
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
@@ -80,7 +72,7 @@ export default function CreateNotice() {
     const handleSubmit = () => {
         const saved = localStorage.getItem('notices');
         const current: Notice[] = saved ? JSON.parse(saved) : [];
-        
+
         const updated = [notice, ...current];
         localStorage.setItem('notices', JSON.stringify(updated));
         data.splice(0, data.length, ...updated);
