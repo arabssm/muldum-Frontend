@@ -54,7 +54,7 @@ export const EnrollButton = styled.button`
     align-items: center;
     padding: 1%;
     width: 13%;
-    border-radius: 0.25rem;
+    border-radius: 20rem;
     background-color: #FF9B62;
     border: 0;
     color: #fff;
