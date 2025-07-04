@@ -15,7 +15,7 @@ export const MenuArea = styled.div`
     width: 35%;
     background-color: #FAFAFA;
     border-radius: 0.625rem;
-    padding: 3% 6% 3% 3%;
+    padding: 2.5% 6% 2.5% 3%;
     margin-bottom: 2%;
     cursor: pointer;
 `;

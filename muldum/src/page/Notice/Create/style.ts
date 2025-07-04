@@ -30,7 +30,7 @@ export const TagBox = styled.div`
     padding: 1.5%;
     font-size: 1.3rem;
     color: #909090;
-    border-bottom: 1px solid #D1D1D1;
+    border-bottom: 0.0625rem solid #D1D1D1;
     margin-bottom: 3%;
 `;
 
@@ -54,7 +54,7 @@ export const EnrollButton = styled.button`
     align-items: center;
     padding: 1%;
     width: 13%;
-    border-radius: 24px;
+    border-radius: 0.25rem;
     background-color: #FF9B62;
     border: 0;
     color: #fff;
@@ -70,7 +70,7 @@ export const TextInput = styled.input`
     padding: 1.3% 2%;
     font-size: 1rem;
     margin-bottom: 1.5%;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     border: 1px solid #D1D1D1;
     color: #1D1D1D;
     cursor: pointer;
@@ -86,7 +86,7 @@ export const Textarea = styled.textarea`
     padding: 1.3% 2%;
     font-size: 1rem;
     margin-bottom: 3%;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     border: 1px solid #D1D1D1;
     color: #1D1D1D;
     cursor: pointer;

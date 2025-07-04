@@ -57,7 +57,7 @@ export const BackButton = styled.button`
     background-color: #FF9B62;
     color: #fff;
     border: none;
-    border-radius: 24px;
+    border-radius: 3rem;
     cursor: pointer;
     align-self: flex-start;
     font-family: 'Paperlogy';
@@ -74,12 +74,11 @@ export const AdditionRow = styled.div`
 export const AdditionLeft = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 4%;
 `;
 
 export const ButtonGroup = styled.div`
     display: flex;
-    gap: 4px;
 
     button {
         background: none;

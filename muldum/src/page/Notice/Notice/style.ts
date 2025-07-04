@@ -70,7 +70,7 @@ export const Badge = styled.span`
     color: #fff;
     padding: 1% 2%;
     font-size: 1rem;
-    border-radius: 24px;
+    border-radius: 3rem;
     line-height: 1;
 `;
 
@@ -96,7 +96,7 @@ export const PageButton = styled.button<{ active?: boolean }>`
     color: #000;
     background-color: #fff;
     border: none;
-    border-radius: 200px;
+    border-radius: 20rem;
     padding: 0.7% 1%;
     cursor: pointer;
 
