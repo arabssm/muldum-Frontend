@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 
 export const High = styled.div`
     width: 90%;
-    border-radius: 12px;
     overflow: hidden;
 `;
 
@@ -14,10 +13,10 @@ export const StyledSlider = styled(Slider)`
 export const SlideWrapper = styled.div`
     position: relative;
     width: 80%;
+    border-radius: 0.2rem;
     height: 24vh;
     overflow: hidden;
     margin: 1% auto;
-    border-radius: 0.5rem;
     color: #FFFFFF;
 `;
 
