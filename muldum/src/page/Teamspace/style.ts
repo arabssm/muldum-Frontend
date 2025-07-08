@@ -2,12 +2,11 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
     width: 100%;
-    margin-top: 1%;
 `;
 
 export const Wrapper = styled.div`
     width: 100%;
-    margin-left: 15%;
+    margin-left: 14.5%;
 `;
 
 export const Title = styled.div`
@@ -17,7 +16,7 @@ export const Title = styled.div`
     font-weight: 600;
     color: #1D1D1D;
     margin-bottom: 1%;
-    margin-top: 3%;
+    margin-top: 2%;
 `;
 
 export const Subtitle = styled.div`
