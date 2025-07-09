@@ -1,4 +1,4 @@
-const data = [
+export const Maindata = [
     {
         idx: 1,
         club: "아라",
@@ -97,4 +97,12 @@ const data = [
     },
 ];
 
-export default data;
+export const SideClub = [{
+        idx: 1,
+        club: "임시",
+        team: [
+        "2301 김예빈 2312 이효준 ",
+        "2111 심현진 2205 김현우 2212 이하은"
+        ]
+    },
+]

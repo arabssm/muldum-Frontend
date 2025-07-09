@@ -23,6 +23,7 @@ export const BoxWrapper = styled.div`
     gap: 1.5rem;
     overflow-x: auto;
     padding-bottom: 1rem;
+    margin-bottom: 4rem;
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
@@ -49,7 +50,7 @@ export const Title = styled.div`
     font-size: 1.5rem;
     font-weight: 600;
     color: #1D1D1D;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 `;
 
 export const ClubTitle = styled.div`
