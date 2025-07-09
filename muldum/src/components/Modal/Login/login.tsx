@@ -3,11 +3,7 @@ import * as _ from './style';
 import '@_styles';
 import mail from '@_assets/modal/mail.svg';
 import password from '@_assets/modal/password.svg';
-
-interface LoginModalProps {
-    onClose: () => void;
-    onFindPassword: () => void;
-}
+import type { LoginModalProps } from './types';
 
 export default function LoginModal({ onClose }: LoginModalProps) {
     const [email, setEmail] = useState('');
