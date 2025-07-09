@@ -67,10 +67,11 @@ export const Group = styled.div`
 
 export const Box = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     border-radius: 0.3rem;
     padding: 2% 2% 2% 3%;
-    width: 90%;
+    width: 79%;
     margin-bottom: 2%;
     gap: 2%;
     background-color: #FAFAFA;
