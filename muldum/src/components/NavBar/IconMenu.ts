@@ -1,7 +1,9 @@
 import { icons } from './icon';
 
-export const IconMenu = [
-    { label: '로그인', path: '', icon: icons.login, iconActive: icons.profile },
+export const getIconMenu = (isLoggedIn: boolean) => [
+    isLoggedIn
+        ? { label: '마이페이지', path: '/mypage', icon: icons.profile, iconActive: icons.profile }
+        : { label: '로그인', path: '', icon: icons.login, iconActive: icons.profile },
     { label: '홈 화면', path: '/', icon: icons.home, iconActive: icons.homeActive },
     { label: '역대 동아리', path: '/club-history', icon: icons.club, iconActive: icons.clubActive },
     { label: '공유 캘린더', path: '', icon: icons.date, iconActive: icons.dateActive },
