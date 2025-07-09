@@ -8,6 +8,6 @@ export const IconMenu = [
     { label: '물품관리', path: '/project-choice', icon: icons.item, iconActive: icons.itemActive },
     { label: '월말평가', path: '', icon: icons.alarm, iconActive: icons.alarmActive },
     { label: '공지사항', path: '/notice', icon: icons.notice, iconActive: icons.noticeActive },
-    { label: '팀스페이스', path: '', icon: icons.teamspace, iconActive: icons.teamspaceActive },
+    { label: '팀스페이스', path: '/team-space', icon: icons.teamspace, iconActive: icons.teamspaceActive },
     { label: '설정', path: '', icon: icons.setting, iconActive: icons.settingActive },
 ];

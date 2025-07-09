@@ -7,6 +7,7 @@ import NotFound from '@_notfound/NotFound';
 import NoticeEdit from '@_notice/Detail/Edit/NoticeEdit';
 import ProjectChoice from '@_pages/Item/Choice/ProjectChoice';
 import Approval from '@_pages/Item/Approval/Approval';
+import Teamspace from '@_pages/Teamspace/Teamspace';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/notice/edit/:id" element={<NoticeEdit />} />
         <Route path="/project-choice" element={<ProjectChoice />} />
         <Route path="/project-approval" element={<Approval />} />
+        <Route path="/team-space" element={<Teamspace />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
