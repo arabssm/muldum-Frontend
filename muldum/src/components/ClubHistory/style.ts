@@ -1,12 +1,17 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-    display: flex;
-    gap: 3%;
     width: 100%;
 `;
 
-export const Box = styled.div`
+export const Wrapper =  styled.div`
+    display: flex;
+    gap: 3%;
+    margin-bottom: 3%;
+    width: 100%;
+`;
+
+export const TopBox = styled.div`
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -16,7 +21,7 @@ export const Box = styled.div`
     gap: 10%;
 `;
 
-export const award = styled.div`
+export const Topaward = styled.div`
     color: #FF9B62;
     font-size: 0.8rem;
     margin-bottom: 6%;
@@ -30,8 +35,7 @@ export const ClubName = styled.div`
 `;
 
 export const temporaryicon = styled.img`
-    width: 20%;
-    cursor: pointer;
+    width: 3rem;
 `;
 
 export const explanation = styled.div`
@@ -59,4 +63,35 @@ export const Group = styled.div`
     align-items: center;
     gap: 4%;
     margin-bottom: 6%;
+`;
+
+export const Box = styled.div`
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    padding: 2% 2% 2% 3%;
+    width: 90%;
+    gap: 2%;
+    background-color: #FAFAFA;
+`;
+
+export const award = styled.div`
+    display: contents;
+    color: #FF9B62;
+    font-size: 0.8rem;
+    margin-bottom: 6%;
+    font-size: 1rem;
+`;
+
+export const Groupping = styled.div`
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 2%;
+`;
+
+export const otherexplanation = styled.div`
+    font-size: 1rem;
+    color: #909090;
+    margin-left: 4%;
 `;
