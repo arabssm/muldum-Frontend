@@ -11,7 +11,7 @@ export default function Best() {
                         <_.Topaward>{item.level}</_.Topaward>
                         <_.Group>
                             <_.temporaryicon src={temporary} alt='icon' />
-                            <_.ClubName>{item.name}</_.ClubName>
+                            <_.Name>{item.name}</_.Name>
                         </_.Group>
                         <_.explanation>{item.explanation}</_.explanation>
                         <_.Detail>자세히 보기</_.Detail>

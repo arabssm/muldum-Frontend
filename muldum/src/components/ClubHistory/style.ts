@@ -30,6 +30,13 @@ export const Topaward = styled.div`
 
 export const ClubName = styled.div`
     font-size: 1.5rem;
+    width: 10%;
+    font-weight: 500;
+    color: #1D1D1D;
+`;
+
+export const Name = styled.div`
+    font-size: 1.5rem;
     font-weight: 500;
     color: #1D1D1D;
 `;
@@ -95,5 +102,5 @@ export const Groupping = styled.div`
 export const otherexplanation = styled.div`
     font-size: 1rem;
     color: #909090;
-    margin-left: 4%;
+    margin-left: 8%;
 `;
