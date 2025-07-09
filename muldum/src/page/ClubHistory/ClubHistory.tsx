@@ -1,6 +1,7 @@
 import { useState } from "react";
 import * as _ from "./style";
 import NavBar from "@_components/NavBar/NavBar";
+import Best from "@_components/ClubHistory/Best";
 import arrow from '@_assets/icon/arrow.svg';
 
 export default function ClubHistory() {
@@ -21,6 +22,7 @@ export default function ClubHistory() {
                     <_.PeriodtText>{periods[currentIndex]}</_.PeriodtText>
                     <_.arrow src={arrow} alt="arrow" />
                 </_.period>
+                <Best />
             </_.Wrapper>
         </_.Container>
     );

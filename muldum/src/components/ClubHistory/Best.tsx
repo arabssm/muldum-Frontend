@@ -1,6 +1,6 @@
 import * as _ from './style';
 
-export default function Beat(){
+export default function Best(){
     return (
         <_.Container>
             dd
