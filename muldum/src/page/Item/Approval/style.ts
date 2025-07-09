@@ -161,3 +161,24 @@ export const RejectButton = styled.button<{ active: boolean }>`
     cursor: pointer;
     font-family: 'Paperlogy';
 `;
+
+export const rescontainer = styled.div`
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    padding: 0;
+`;
+
+export const reabtn = styled.div<{ selected: boolean }>`
+    padding: 1% 2%;
+    border-radius: 4px;
+    background-color: ${({ selected }) => (selected ? '#FF9B62' : '#B2B2B2')};
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 400;
+
+    ::selection {
+        background-color: #ff9b62;
+    }
+`;
