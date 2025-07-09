@@ -8,6 +8,7 @@ import NoticeEdit from '@_notice/Detail/Edit/NoticeEdit';
 import ProjectChoice from '@_pages/Item/Choice/ProjectChoice';
 import Approval from '@_pages/Item/Approval/Approval';
 import Teamspace from '@_pages/Teamspace/Teamspace';
+import ClubHistory from '@_pages/ClubHistory/ClubHistory';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/project-choice" element={<ProjectChoice />} />
         <Route path="/project-approval" element={<Approval />} />
         <Route path="/team-space" element={<Teamspace />} />
+        <Route path="/club-history" element={<ClubHistory />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
