@@ -14,11 +14,33 @@ export const Box = styled.div`
     border-radius: 0.5rem;
     width: 18rem;
     padding: 2% 5% 2% 2%;
+    flex: 0 0 auto;
 `;
+
 
 export const BoxWrapper = styled.div`
     display: flex;
     gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::-webkit-scrollbar {
+        height: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #fff;
+        border-radius: 0.25rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
 `;
 
 export const Title = styled.div`
