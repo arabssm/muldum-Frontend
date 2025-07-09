@@ -46,5 +46,5 @@ export const PeriodtText = styled.div`
 `;
 
 export const arrow = styled.img`
-    color: #909090;
+    transform: rotate(-90deg);   
 `;
