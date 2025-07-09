@@ -1,8 +1,15 @@
 import * as _ from './style';
 import temporary from '@_assets/icon/temporary.svg';
-import { topData, bottomData } from './data';
+import { topDataByPeriod, bottomDataByPeriod } from './data';
 
-export default function Best() {
+interface BestProps {
+    period: string;
+}
+
+export default function Best({ period }: BestProps) {
+    const topData = topDataByPeriod[period] || [];
+    const bottomData = bottomDataByPeriod[period] || [];
+
     return (
         <_.Container>
             <_.Wrapper>

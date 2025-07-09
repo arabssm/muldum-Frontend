@@ -31,7 +31,7 @@ export default function ClubHistory() {
                     ))}
                 </_.PeriodSelect>
 
-                <Best />
+                <Best period={periods[currentIndex]} />
             </_.Wrapper>
         </_.Container>
     );
