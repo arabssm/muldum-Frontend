@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import arrow from '@_assets/icon/arrow.svg'
 
 export const Container = styled.div`
     width: 100%;
@@ -27,7 +28,7 @@ export const Subtitle = styled.div`
     margin-bottom: 3%;
 `;
 
-export const period = styled.button`
+export const period = styled.option`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +47,25 @@ export const PeriodtText = styled.div`
     color: #909090;
 `;
 
-export const arrow = styled.img`
-    transform: rotate(-90deg);   
+export const PeriodSelect = styled.select`
+    padding: 0.4% 0.6%;
+    border: 0.1rem solid #909090;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    font-family: 'Paperlogy';
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #909090;
+    cursor: pointer;
+    margin-bottom: 4%;
+    background-image: url(${arrow});
+    background-repeat: no-repeat;
+    background-position: right 0.2rem center;
+`;
+
+
+
+export const PeriodOption = styled.option`
+    background-color: white;
+    color: #1D1D1D;
 `;
