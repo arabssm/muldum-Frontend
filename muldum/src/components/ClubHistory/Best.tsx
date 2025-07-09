@@ -3,10 +3,13 @@ import temporary from '@_assets/icon/temporary.svg';
 import { topDataByPeriod, bottomDataByPeriod } from './data';
 import type { BestProps } from './types';
 
-
 export default function Best({ period }: BestProps) {
     const topData = topDataByPeriod[period] || [];
     const bottomData = bottomDataByPeriod[period] || [];
+
+    const handleAlert = () => {
+        alert('현재 작성된 내용이 없습니다.');
+    };
 
     return (
         <_.Container>
@@ -19,7 +22,9 @@ export default function Best({ period }: BestProps) {
                             <_.Name>{item.name}</_.Name>
                         </_.Group>
                         <_.explanation>{item.explanation}</_.explanation>
-                        <_.Detail>자세히보기</_.Detail>
+                        <_.Detail onClick={() => { handleAlert(); }}>
+                            자세히보기
+                        </_.Detail>
                     </_.TopBox>
                 ))}
             </_.Wrapper>
