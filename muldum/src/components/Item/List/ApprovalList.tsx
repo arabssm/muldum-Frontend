@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import * as _ from './style';
 import NavBar from '@_components/NavBar/NavBar';
 import data from './data';
@@ -6,7 +7,8 @@ import type { Props } from './types';
 export default function ApprovalList({
   selectedItems,
   setSelectedItems,
-}: Props) {
+  setAllItemIds,
+}: Props & { setAllItemIds: (ids: number[]) => void }) {
   const handleSelect = (index: number) => {
     if (selectedItems.includes(index)) {
       setSelectedItems(selectedItems.filter((i) => i !== index));
@@ -14,6 +16,11 @@ export default function ApprovalList({
       setSelectedItems([...selectedItems, index]);
     }
   };
+
+  useEffect(() => {
+    const ids = data.map((_, index) => index);
+    setAllItemIds(ids);
+  }, [setAllItemIds]);
 
   return (
     <_.Container>
