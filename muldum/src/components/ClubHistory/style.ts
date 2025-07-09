@@ -30,7 +30,7 @@ export const Topaward = styled.div`
 
 export const ClubName = styled.div`
     font-size: 1.5rem;
-    width: 10%;
+    width: 18%;
     font-weight: 500;
     color: #1D1D1D;
 `;
