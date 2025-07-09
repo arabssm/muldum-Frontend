@@ -57,7 +57,7 @@ export const Detail = styled.div`
     text-align: center;
     font-size: 1rem;
     width: 100%;
-    padding: 5% 0% 4% 2%;
+    padding: 5% 0% 5% 2%;
     border-radius: 1rem;
     background-color: #FF9B62;
     color: #fff;
