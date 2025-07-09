@@ -1,15 +1,30 @@
 import * as _ from './style';
 import NavBar from '@_components/NavBar/NavBar';
-import data, { Props } from './data';
+import data from './data';
+import type { Props } from './types';
 
-export default function ApprovalList({ selectAll }: Props) {
+export default function ApprovalList({
+  selectedItems,
+  setSelectedItems,
+}: Props) {
+  const handleSelect = (index: number) => {
+    if (selectedItems.includes(index)) {
+      setSelectedItems(selectedItems.filter((i) => i !== index));
+    } else {
+      setSelectedItems([...selectedItems, index]);
+    }
+  };
+
   return (
     <_.Container>
       <NavBar />
       <_.ListWrapper>
         {data.map((name, index) => (
-          <_.ItemRow key={index}>
-            <_.ItemIndex selected={selectAll}>
+          <_.ItemRow
+            key={index}
+            onClick={() => handleSelect(index)}
+          >
+            <_.ItemIndex selected={selectedItems.includes(index)}>
               {String(index + 1).padStart(2, '0')}
             </_.ItemIndex>
             <_.ItemName href="https://github.com/dpqlsn" target="_blank">

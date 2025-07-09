@@ -16,7 +16,7 @@ export const ItemRow = styled.div`
   align-items: center;
   background-color: #fff;
   border: 0.1rem solid #B2B2B2;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 1rem;
 `;
 
@@ -64,3 +64,4 @@ export const ItemInput = styled.input`
         box-shadow: none;
     }
 `;
+
