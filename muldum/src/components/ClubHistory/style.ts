@@ -14,11 +14,11 @@ export const Wrapper =  styled.div`
 export const TopBox = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 20%;
     padding: 3%;
     background-color: #FAFAFA;
     border-radius: 0.3rem;
-    gap: 10%;
 `;
 
 export const Topaward = styled.div`
