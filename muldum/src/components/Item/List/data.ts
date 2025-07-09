@@ -7,8 +7,4 @@ const data = [
     '우리의 낙원에서 만나자 : 이 계절을 함께 건너는 당신에게',
 ];
 
-export interface Props {
-    selectAll: boolean;
-}
-
 export default data;
