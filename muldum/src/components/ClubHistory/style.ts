@@ -71,6 +71,7 @@ export const Box = styled.div`
     border-radius: 0.3rem;
     padding: 2% 2% 2% 3%;
     width: 90%;
+    margin-bottom: 2%;
     gap: 2%;
     background-color: #FAFAFA;
 `;
