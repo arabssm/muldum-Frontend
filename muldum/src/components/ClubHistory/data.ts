@@ -41,7 +41,7 @@ const bottomData = [
     {
         idx: 7,
         level: "동아리",
-        name: "SPACE",
+        name: "#ASH",
         explanation: "NoCode Develop Tool",
     },
     {
