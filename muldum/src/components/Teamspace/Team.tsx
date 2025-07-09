@@ -1,13 +1,16 @@
 import * as _ from './style';
+import data from './data';
 
-export default function Team(){
-    return(
+export default function Team() {
+    return (
         <_.Container>
-            <_.Title>전공동아리</_.Title>
-            <_.Box>
-                <_.ClubTitle>아라</_.ClubTitle>
-                <_.Name>예빈잉</_.Name>
-            </_.Box>
+        <_.Title>전공동아리</_.Title>
+            {data.map((item) => (
+                <_.Box key={item.idx}>
+                <_.ClubTitle>{item.club}</_.ClubTitle>
+                <_.Name>{item.team}</_.Name>
+                </_.Box>
+            ))}
         </_.Container>
-    )
+    );
 }

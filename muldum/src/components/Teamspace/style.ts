@@ -11,7 +11,7 @@ export const Box = styled.div`
     background-color: #FAFAFA;
     border-radius: 0.5rem;
     width: 18rem;
-    padding: 2% 5% 5% 2%;
+    padding: 2% 5% 2% 2%;
 `;
 
 export const Title = styled.div`
