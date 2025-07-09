@@ -5,9 +5,9 @@ import '@_styles';
 import NavBar from '@_navbar/NavBar';
 import ApprovalList from '@_components/Item/List/ApprovalList';
 import Clubs from './ClubList';
-import LongShot from './LongShot';
+import LongShot from '@_components/Item/List/LongShot';
 import Filter from './Filter';
-import ClubSelector from './ClubSelector';
+import ClubSelector from '@_components/Item/List/ClubSelector';
 import RejectModal from '@_modal/Approval/Rejectmodal';
 import ApprovalModal from '@_modal/Approval/ApprovalModal';
 

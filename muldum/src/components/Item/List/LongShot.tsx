@@ -1,7 +1,7 @@
-import * as _ from './style';
+import * as _ from '@_pages/Item/Approval/style';
+import { Props } from '@_pages/Item/Approval/type';
+import { Reason } from '@_pages/Item/Approval/data';
 import '@_styles';
-import { Props } from './type';
-import { Reason } from './data';
 
 export default function RejectReasonSelector({ rejectReason, setRejectReason }: Props) {
     return (
