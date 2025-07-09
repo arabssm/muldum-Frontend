@@ -1,10 +1,8 @@
 import * as _ from './style';
 import temporary from '@_assets/icon/temporary.svg';
 import { topDataByPeriod, bottomDataByPeriod } from './data';
+import type { BestProps } from './types';
 
-interface BestProps {
-    period: string;
-}
 
 export default function Best({ period }: BestProps) {
     const topData = topDataByPeriod[period] || [];
@@ -21,7 +19,7 @@ export default function Best({ period }: BestProps) {
                             <_.Name>{item.name}</_.Name>
                         </_.Group>
                         <_.explanation>{item.explanation}</_.explanation>
-                        <_.Detail>자세히 보기</_.Detail>
+                        <_.Detail>자세히보기</_.Detail>
                     </_.TopBox>
                 ))}
             </_.Wrapper>

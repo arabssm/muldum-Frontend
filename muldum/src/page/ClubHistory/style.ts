@@ -63,9 +63,30 @@ export const PeriodSelect = styled.select`
     background-position: right 0.2rem center;
 `;
 
-
-
 export const PeriodOption = styled.option`
     background-color: white;
     color: #1D1D1D;
+`;
+
+export const CelebrateEmoji = styled.div`
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    animation: pop-up 1s ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+
+    @keyframes pop-up {
+        0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        }
+        100% {
+        transform: translate(-50%, -150%) scale(2);
+        opacity: 0;
+        }
+    }
 `;
