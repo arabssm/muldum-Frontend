@@ -34,6 +34,7 @@ export const period = styled.button`
     background-color: transparent;
     border: 0.1rem solid #909090;
     border-radius: 0.25rem;
+    margin-bottom: 4%;
     padding: 0.4% 0.6%;
     cursor: pointer;
     font-family: 'Paperlogy';
