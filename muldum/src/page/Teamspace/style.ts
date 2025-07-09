@@ -24,5 +24,5 @@ export const Subtitle = styled.div`
     justify-content: left;
     font-size: 1.2rem;
     color: #707070;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
 `;

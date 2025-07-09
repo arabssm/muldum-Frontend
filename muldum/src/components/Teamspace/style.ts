@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
 `;
 
 export const Box = styled.div`
@@ -12,6 +14,11 @@ export const Box = styled.div`
     border-radius: 0.5rem;
     width: 18rem;
     padding: 2% 5% 2% 2%;
+`;
+
+export const BoxWrapper = styled.div`
+    display: flex;
+    gap: 1.5rem;
 `;
 
 export const Title = styled.div`
