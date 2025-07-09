@@ -16,21 +16,13 @@ export default function LoginModal({ onClose }: LoginModalProps) {
 
             <_.InputWrap>
             <img src={mail} alt="mail" />
-            <input
-                type="email"
-                placeholder="이메일을 입력하세요"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+            <input type="email" placeholder="이메일을 입력하세요" value={email} onChange={(e) => setEmail(e.target.value)}
             />
             </_.InputWrap>
 
             <_.InputWrap>
             <img src={password} alt="password" />
-            <input
-                type="password"
-                placeholder="비밀번호"
-                value={pw}
-                onChange={(e) => setPw(e.target.value)}
+            <input type="password" placeholder="비밀번호" value={pw} onChange={(e) => setPw(e.target.value)}
             />
             </_.InputWrap>
 

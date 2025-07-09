@@ -29,9 +29,10 @@ export const Title = styled.div`
 export const InputWrap = styled.div`
     display: flex;
     align-items: center;
-    background: #f7f7f7;
+    background: #FAFAFA;
+    color: #1E1E1E;
     border-radius: 0.625rem; 
-    padding: 0.625rem 0.9375rem;
+    padding: 1rem 0.9375rem;
     margin-bottom: 1.25rem;
 
     img {
@@ -46,6 +47,10 @@ export const InputWrap = styled.div`
         font-size: 1rem;
         outline: none;
         font-family: 'Paperlogy';
+    }
+
+    input::placeholder {
+        color: #B2B2B2;
     }
 `;
 
