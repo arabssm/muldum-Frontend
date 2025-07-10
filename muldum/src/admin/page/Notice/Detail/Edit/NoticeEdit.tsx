@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import * as _ from './style';
-import EditSuccess from 'src/admin/components/Modal/Notice/EditSuccess';
+import EditSuccess from '@_components/Modal/Notice/EditSuccess';
 import data from '../data';
-import NavBar from 'src/admin/components/NavBar/NavBar';
+import NavBar from '@_all/component/sibebar/sidebar';
 import '@_styles';
 import { Notice } from './type';
 
