@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@_assets/*": ["src/assets/*"],
+      "@_assets/*": ["src/all/assets/*"],
       "@_modalImages/*": ["src/assets/modal/*"],
       "@_components/*": ["src/admin/components/*"],
       "@_menu/*": ["src/admin/components/Menu/*"],
