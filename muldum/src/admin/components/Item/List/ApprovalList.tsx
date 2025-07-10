@@ -34,7 +34,7 @@ export default function ApprovalList({
             <_.ItemIndex selected={selectedItems.includes(index)}>
               {String(index + 1).padStart(2, '0')}
             </_.ItemIndex>
-            <_.ItemName href="https://github.com/dpqlsn" target="_blank">
+            <_.ItemName href="https://github.com/123isi" target="_blank">
               {name}
             </_.ItemName>
             <_.ItemInput placeholder="사유를 적기" />
