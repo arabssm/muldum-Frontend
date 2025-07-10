@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axiosInstance from '../../../lib/axiosInatanse';
+import axiosInstance from '../../../lib/axiosInatance';
 
 export default function LoginRedirectPage() {
   const navigate = useNavigate();

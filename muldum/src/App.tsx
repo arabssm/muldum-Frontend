@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from 'src/admin/page/Main/Main';
-import Notice from 'src/admin/page/Notice/Notice/Notice';
-import DetailNotice from 'src/admin/page/Notice/Detail/Examine/DetailNotice';
-import CreateNotice from 'src/admin/page/Notice/Create/CreateNotice';
-import NotFound from 'src/admin/components/NotFound/NotFound';
+import Main from '@_main/Main';
+import Notice from '@_notice/Notice/Notice';
+import DetailNotice from '@_notice/Detail/Examine/DetailNotice';
+import CreateNotice from '@_notice/Create/CreateNotice';
+import NotFound from '@_components/';
 import NoticeEdit from 'src/admin/page/Notice/Detail/Edit/NoticeEdit';
 import ProjectChoice from 'src/admin/page/Item/Choice/ProjectChoice';
 import Approval from 'src/admin/page/Item/Approval/Approval';
