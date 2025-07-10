@@ -1,4 +1,4 @@
-import Notice from "@";
+import Notice from "../../component/onboarding/notice/notice";
 import Sidebar from "@_components/Slide/Slide";
 import styled from "@emotion/styled";
 export default function Notice1(){
