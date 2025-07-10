@@ -12,7 +12,11 @@
       "@_pages/*": ["src/admin/page/*"],
       "@_main/*": ["src/admin/page/Main/*"],
       "@_notice/*": ["src/admin/page/Notice/*"],
-      "@_styles/*": ["src/App.css"]
+      "@_styles/*": ["src/App.css"],
+      "@_page/*": ["src/student/page/*"],
+      "@_component/*": ["src/student/component/*"],
+      "@_all/*": ["src/all/*"],
+      "@_api/*": ["src/api/*"]
     },
     "jsx": "react-jsx"
   },

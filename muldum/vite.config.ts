@@ -23,6 +23,10 @@ export default defineConfig({
       '@_main': path.resolve(__dirname, 'src/page/Main'),
       '@_notice': path.resolve(__dirname, 'src/page/Notice'),
       '@_styles': path.resolve(__dirname, 'src/App.css'),
+      '@_page': path.resolve(__dirname, 'src/page'),
+      '@_component': path.resolve(__dirname, 'src/component'),
+      '@_api': path.resolve(__dirname, 'src/api'),
+      '@_all': path.resolve(__dirname, 'src/all')
     }
   }
 });
