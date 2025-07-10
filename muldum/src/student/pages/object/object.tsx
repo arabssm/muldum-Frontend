@@ -1,16 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as _ from './style';
 import Sidebar from '@_components/sibebar/sidebar';
 import Box from '@_components/object/box';
 import type { Request } from '@_components/object/types';
 import { initialRequests } from './data';
-
+import ApplyObject from '../../../api/object/apply'
 export default function Object() {
   const remaining = 200000;
   const used = 120031;
   const [item, setItem] = useState('');
   const [price, setPrice] = useState('');
   const [link, setLink] = useState('');
+  const [source, setsource] = useState('');
   const [qty, setQty] = useState(1);
   const [reason, setReason] = useState('');
 
@@ -26,20 +27,19 @@ export default function Object() {
       alert('물품명과 사유(10자 이상)를 입력하세요.');
       return;
     }
-    const newNo = String(requests.length + 1).padStart(2, '0');
-    const newReq: Request = {
-      no: newNo,
-      title: item,
-      qty,
-      status: '승인대기중',
-      reason,
-    };
-    setRequests([...requests, newReq]);
-    setItem('');
-    setPrice('');
-    setLink('');
-    setQty(1);
-    setReason('');
+    useEffect(() => {
+      const { hostname } = new URL(link); 
+      const domain = hostname.replace(/^www\./, ''); 
+      const source = domain.split('.')[0]; 
+      ApplyObject(item,qty,price,link,source,reason,1)
+        .then((data) => {
+
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log("게시물을 불러오는 데 실패했습니다.", err);
+        });
+    }, []);
   };
 
   return (
