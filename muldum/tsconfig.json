@@ -4,14 +4,14 @@
     "paths": {
       "@_assets/*": ["src/assets/*"],
       "@_modalImages/*": ["src/assets/modal/*"],
-      "@_components/*": ["src/components/*"],
-      "@_menu/*": ["src/components/Menu/*"],
-      "@_modal/*": ["src/components/Modal/*"],
-      "@_navbar/*": ["src/components/NavBar/*"],
-      "@_notfound/*": ["src/components/NotFound/*"],
-      "@_pages/*": ["src/page/*"],
-      "@_main/*": ["src/page/Main/*"],
-      "@_notice/*": ["src/page/Notice/*"],
+      "@_components/*": ["src/admin/components/*"],
+      "@_menu/*": ["src/admin/components/Menu/*"],
+      "@_modal/*": ["src/admin/components/Modal/*"],
+      "@_navbar/*": ["src/admin/components/NavBar/*"],
+      "@_notfound/*": ["src/admin/components/NotFound/*"],
+      "@_pages/*": ["src/admin/page/*"],
+      "@_main/*": ["src/admin/page/Main/*"],
+      "@_notice/*": ["src/admin/page/Notice/*"],
       "@_styles/*": ["src/App.css"]
     },
     "jsx": "react-jsx"

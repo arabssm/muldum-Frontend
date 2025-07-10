@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from '@_pages/Main/Main';
-import Notice from '@_notice/Notice/Notice';
-import DetailNotice from '@_notice/Detail/Examine/DetailNotice';
-import CreateNotice from '@_notice/Create/CreateNotice';
-import NotFound from '@_notfound/NotFound';
-import NoticeEdit from '@_notice/Detail/Edit/NoticeEdit';
-import ProjectChoice from '@_pages/Item/Choice/ProjectChoice';
-import Approval from '@_pages/Item/Approval/Approval';
-import Teamspace from '@_pages/Teamspace/Teamspace';
-import ClubHistory from '@_pages/ClubHistory/ClubHistory';
+import Main from 'src/admin/page/Main/Main';
+import Notice from 'src/admin/page/Notice/Notice/Notice';
+import DetailNotice from 'src/admin/page/Notice/Detail/Examine/DetailNotice';
+import CreateNotice from 'src/admin/page/Notice/Create/CreateNotice';
+import NotFound from 'src/admin/components/NotFound/NotFound';
+import NoticeEdit from 'src/admin/page/Notice/Detail/Edit/NoticeEdit';
+import ProjectChoice from 'src/admin/page/Item/Choice/ProjectChoice';
+import Approval from 'src/admin/page/Item/Approval/Approval';
+import Teamspace from 'src/admin/page/Teamspace/Teamspace';
+import ClubHistory from 'src/admin/page/ClubHistory/ClubHistory';
 
 export default function App() {
   return (
