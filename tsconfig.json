@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",  // ✅ 추가
+    "baseUrl": ".",
+    "paths": {
+      "@_assets/*": ["src/assets/*"],
+      "@_atom/*": ["src/atom/*"],
+      "@_components/*": ["src/component/*"],
+      "@_componentsModal/*": ["src/component/modal/*"],
+      "@_componentsOnboarding/*": ["src/component/onboarding/*"],
+      "@_util/*": ["src/util/*"],
+      "@_styles/*": ["src/styles/*"],
+      "@_pages/*": ["src/pages/*"]
+    },
+    "jsx": "react-jsx",
+    "lib": ["dom", "esnext"],
+    "types": ["react"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src", "vite-env.d.ts"],
+  "exclude": ["node_modules"]
+}
