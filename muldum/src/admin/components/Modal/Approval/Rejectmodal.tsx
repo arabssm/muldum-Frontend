@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Reject from '@_assets/modal/RejectModal.svg';
+import Reject from '@_all/assets/modal/RejectModal.svg';
 import * as _ from '../style';
 import '@_styles';
 import { Props } from './type';

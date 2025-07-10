@@ -1,7 +1,7 @@
 import * as _ from './style';
 import '@_styles'
-import NavBar from 'src/admin/components/NavBar/NavBar';
-import Team from 'src/admin/components/Teamspace/Team';
+import NavBar from '@_all/component/sibebar/sidebar';
+import Team from '@_components/Teamspace/Team';
 
 export default function Teamspace(){
     return(

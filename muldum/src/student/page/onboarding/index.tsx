@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import { useRecoilValue } from 'recoil';
-import { loginModalState, whereismypasswordModalState } from "@_atom/Modal";
-import LoginModal from '@_componentsModal/login/login';
-import Sidebar from '@_components/sibebar/sidebar';
-import Slbe from '@_componentsOnboarding/sliber/sliber';
-import Menu from '@_componentsOnboarding/menu/menu';
-import Notice from '@_componentsOnboarding/notice/notice';
-import PasswordModal from '@_componentsModal/password/password';
+import { loginModalState, whereismypasswordModalState } from "@_all/atom/Modal";
+import LoginModal from '@_component/modal/login/login';
+import NavBar from '@_all/component/sibebar/sidebar';
+import Slbe from '@_all/component/Slide/Slide';
+import Menu from '@_all/component/menu/menu';
+import Notice from '@_component/onboarding/notice/notice';
+import PasswordModal from '@_component/modal/password/password';
 
 export default function Home(){
     const isOpen = useRecoilValue(loginModalState)
@@ -14,7 +14,7 @@ export default function Home(){
 
     return(
     <Container>
-        < Sidebar/>
+        < NavBar/>
             <King>
                 <Slbe/>
                 <Menu />

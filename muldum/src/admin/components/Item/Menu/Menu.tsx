@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
 import '@_styles';
-import specialty from '@_assets/item/specialty.svg';
+import specialty from '@_assets/Item/specialty.svg';
 import autonomy from '@_assets/item/autonomy.svg';
 import net from '@_assets/item/net.svg';
 import congrats from '@_assets/item/congrats.svg';

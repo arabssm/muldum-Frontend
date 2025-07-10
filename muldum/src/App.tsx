@@ -8,23 +8,37 @@ import NoticeEdit from '@_pages/Notice/Detail/Edit/NoticeEdit';
 import ProjectChoice from '@_pages/Item/Choice/ProjectChoice';
 import Approval from '@_pages/Item/Approval/Approval';
 import Teamspace from '@_pages/Teamspace/Teamspace';
-import ClubHistory from 'src/admin/page/ClubHistory/ClubHistory';
+import ClubHistory from '@_pages/ClubHistory/ClubHistory';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import Onboarding from '@_page/onboarding/index';
+import SNotice from '@_page/notice/notice';
+import Object from '@_page/object/object';
 
 export default function App() {
+  const role = "TEACHER"; 
+  // const role = "STUDENT";
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/notice" element={<Notice />} />
-        <Route path="/notice/:id" element={<DetailNotice />} />
-        <Route path="/create-notice" element={<CreateNotice />} />
-        <Route path="/notice/edit/:id" element={<NoticeEdit />} />
-        <Route path="/project-choice" element={<ProjectChoice />} />
-        <Route path="/project-approval" element={<Approval />} />
-        <Route path="/team-space" element={<Teamspace />} />
-        <Route path="/club-history" element={<ClubHistory />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={role === "TEACHER" ? <Main /> : <Onboarding />} />
+      <Route path="/notice" element={role === "TEACHER" ? <Notice /> : <SNotice />} />
+      <Route path="/project-approval" element={role === "TEACHER" ? <Approval /> : <Object />} />
+      <Route path="/notice/:id" element={<DetailNotice />} />
+      <Route path="/create-notice" element={<CreateNotice />} />
+      <Route path="/notice/edit/:id" element={<NoticeEdit />} />
+      <Route path="/project-choice" element={<ProjectChoice />} />
+      <Route path="/team-space" element={<Teamspace />} />
+      <Route path="/club-history" element={<ClubHistory />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
+);

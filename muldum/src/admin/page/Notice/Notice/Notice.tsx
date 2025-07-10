@@ -4,7 +4,7 @@ import * as _ from './style';
 import '@_styles';
 import { icons } from './data';
 import Box from './Box';
-import NavBar from 'src/admin/components/NavBar/NavBar';
+import Sidebar from '@_all/component/sibebar/sidebar';
 import Pagination from './Pagination';
 import { NoticeItem } from './type';
 
@@ -38,7 +38,7 @@ export default function Notice() {
 
     return (
         <_.Container>
-        <NavBar />
+        <Sidebar />
         <_.Wrapper>
             <_.PageTitle>공지사항</_.PageTitle>
             <_.SearchBar>

@@ -1,5 +1,5 @@
 import * as _ from './style';
-import temporary from '@_assets/icon/temporary.svg';
+import temporary from '@_assets/Item/temporary.svg';
 import { topDataByPeriod, bottomDataByPeriod } from './data';
 import type { BestProps } from './types';
 

@@ -1,12 +1,12 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
-import { whereismypasswordModalState } from '../../../atom/Modal';
+import { whereismypasswordModalState } from '@_all/atom/Modal';
 import styled from '@emotion/styled';
 
-import emailIcon from '../../../assets/login/email.svg';
-import passwordIcon from '../../../assets/login/password.svg';
-import checkIcon from '../../../assets/login/ check.svg';
+import emailIcon from '@_assets/login/email.svg';
+import passwordIcon from '@_assets/login/password.svg';
+import checkIcon from '@_assets/login/check.svg';
 
 
 export default function LoginModal() {

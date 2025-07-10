@@ -1,10 +1,10 @@
 import Notice from "../../component/onboarding/notice/notice";
-import Sidebar from "@_components/Slide/Slide";
+import NavBar from '@_all/component/sibebar/sidebar';
 import styled from "@emotion/styled";
 export default function Notice1(){
     return(
         <Container>
-        <Sidebar />
+        <NavBar />
         <Notice />
         </Container>
     );

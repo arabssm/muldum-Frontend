@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import * as _ from './style';
-import NavBar from 'src/admin/components/NavBar/NavBar';
+import NavBar from '@_all/component/sibebar/sidebar';
 import data from './data';
 import type { Props } from './types';
 

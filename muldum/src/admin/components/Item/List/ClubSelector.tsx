@@ -1,5 +1,5 @@
-import * as _ from 'src/admin/page/Item/Approval/style';
-import { ClubSelectorProps } from 'src/admin/page/Item/Approval/type';
+import * as _ from '@_pages/Item/Approval/style';
+import { ClubSelectorProps } from '@_pages/Item/Approval/type';
 
 export default function ClubSelector({ clubs, selectedClub, setSelectedClub }: ClubSelectorProps) {
     const handleSelect = (club: string) => {

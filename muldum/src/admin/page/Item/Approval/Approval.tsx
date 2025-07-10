@@ -2,13 +2,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as _ from "./style";
 import "@_styles";
-import NavBar from "src/admin/components/NavBar/NavBar";
-import ApprovalList from "src/admin/components/Item/List/ApprovalList";
+import NavBar from "@_all/component/sibebar/sidebar";
+import ApprovalList from "@_components/Item/List/ApprovalList";
 import Clubs from "./ClubList";
 import Filter from "./Filter";
-import ClubSelector from "src/admin/components/Item/List/ClubSelector";
-import RejectModal from "src/admin/components/Modal/Approval/Rejectmodal";
-import ApprovalModal from "src/admin/components/Modal/Approval/ApprovalModal";
+import ClubSelector from "@_components/Item/List/ClubSelector";
+import RejectModal from "@_modal/Approval/Rejectmodal";
+import ApprovalModal from "@_modal/Approval/ApprovalModal";
 import ReasonButtons from "./Reason"; 
 
 const Approval = () => {

@@ -14,7 +14,6 @@ export default async function getNotice() {
     }
   }
 
-
 export async function getNoticeDetail(id) {
     try {
       const res = await axiosInstance.get(`ara/notice/${id}?state=GENERAL`);

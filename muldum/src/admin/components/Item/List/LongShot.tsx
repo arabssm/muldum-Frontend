@@ -1,7 +1,13 @@
-import * as _ from 'src/admin/page/Item/Approval/style';
-import { Props } from 'src/admin/page/Item/Approval/type';
-import { Reason } from 'src/admin/page/Item/Approval/Reason';
+import * as _ from '@_pages/Item/Approval/style';
+import { Props } from '@_pages/Item/Approval/type';
 import '@_styles';
+
+export const Reason = [
+    '구입처를 잘못 입력한 물품',
+    '구매 사유가 적절하지 않은 물품',
+    '가격이 과도하게 많이 나가는 물품',
+    '기타사유',
+];
 
 export default function RejectReasonSelector({ rejectReason, setRejectReason }: Props) {
     return (

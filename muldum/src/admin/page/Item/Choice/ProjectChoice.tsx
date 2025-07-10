@@ -1,6 +1,6 @@
 import * as _ from './style';
-import NavBar from 'src/admin/components/NavBar/NavBar';
-import Menu from 'src/admin/components/Item/Menu/Menu';
+import NavBar from '@_all/component/sibebar/sidebar';
+import Menu from '@_components/Item/Menu/Menu';
 import '@_styles';
 
 export default function ProjectChoice(){

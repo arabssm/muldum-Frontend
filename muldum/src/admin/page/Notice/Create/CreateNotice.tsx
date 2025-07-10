@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
-import NavBar from 'src/admin/components/NavBar/NavBar';
-import EditSuccess from 'src/admin/components/Modal/Notice/EditSuccess';
+import NavBar from '@_all/component/sibebar/sidebar';
+import EditSuccess from '@_components/Modal/Notice/EditSuccess';
 import data from '../Detail/data';
 import '@_styles';
 import useNoticeState from './useNoticeState';

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as _ from "./style";
-import NavBar from "src/admin/components/NavBar/NavBar";
-import Best from "src/admin/components/ClubHistory/Best";
+import NavBar from "@_all/component/sibebar/sidebar";
+import Best from "@_components/ClubHistory/Best";
 
 export default function ClubHistory() {
     const periods = ['1기', '2기', '3기'];

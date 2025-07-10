@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import arrow from '@_assets/icon/arrow.svg'
+import arrow from '@_all/assets/Item/arrow.svg'
 
 export const Container = styled.div`
     width: 100%;

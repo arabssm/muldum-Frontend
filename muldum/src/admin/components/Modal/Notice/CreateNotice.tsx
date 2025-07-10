@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import CheckIcon from '@_assets/modal/apply.svg';
+import CheckIcon from '@_all/assets/apply.svg';
 import * as _ from '../style';
 import '@_styles';
 import { Props } from './type'

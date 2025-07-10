@@ -1,4 +1,4 @@
-import Img from '@_assets/Img.svg';
+import Img from '@_all/assets/onboarding/background.svg';
 export interface Notice {
     idx: number;
     title: string;
