@@ -1,13 +1,13 @@
-import axiosInstance from "../../lib/axiosInatance";
+import axiosInstance from "../lib/axiosInatanse";
 
-export default async function ApplyObject(team_id,Objectname,count,price,link,source,reason) {
+export default async function Apply(name1,number,price,link,source,reason,team_id) {
     try {
-      const res = await axiosInstance.post(`/std/items/${team_id}/temp`,{
-        "product_name":Objectname,
-        "quantity":count,
+      const res = await axiosInstance.post(`/std/items/1/temp`,{
+        "productName":name1,
+        "quantity":number,
         "price":price,
-        "product_link":link,
-        "item_source":source,
+        "productLink":link,
+        "itemsource":source,
         "reason":reason
       });
   
@@ -15,6 +15,54 @@ export default async function ApplyObject(team_id,Objectname,count,price,link,so
         return res.status;
       }
       return res.data;
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
+  }
+  export async function getApply(team_id) {
+    try {
+      const res = await axiosInstance.get(`/std/items/1/temp`);
+      if (res.status !== 200) {
+        return res.status;
+      }
+      return res.data;
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
+  }
+  export async function getApplyall(team_id) {
+    try {
+      const res = await axiosInstance.get(`/std/items/1`);
+      if (res.status !== 200) {
+        return res.status;
+      }
+      return res.data;
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
+  }
+
+  export async function getMoney(team_id) {
+    try {
+      const res = await axiosInstance.get(`/std/items/money/1`);
+      if (res.status !== 200) {
+        return res.status;
+      }
+      return res.data;
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
+  }
+export async function finalapply(team_id) {
+    try {
+      const res = await axiosInstance.patch(`/std/items/1`);
+      if (res.status !== 200) {
+        return res.status;
+      }
     } catch (err) {
       console.log(err);
       throw err;
