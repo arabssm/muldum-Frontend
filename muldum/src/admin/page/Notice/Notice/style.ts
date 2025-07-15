@@ -65,7 +65,7 @@ export const Left = styled.div`
     gap: 2%;
 `;
 
-export const Badge = styled.span`
+export const Badge = styled.div`
     background-color: #FF9B62;
     color: #fff;
     padding: 1% 2%;

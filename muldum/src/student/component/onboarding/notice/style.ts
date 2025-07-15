@@ -63,7 +63,7 @@ export const BoxContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    width: 73%;
+    width: 85%;
     padding: 1rem 0;
 `;
 
@@ -71,7 +71,6 @@ export const Container = styled.div`
     display: flex;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
-    margin-left: 3.3rem;
     cursor: pointer;
 `;
 
@@ -82,7 +81,7 @@ export const Left = styled.div`
     flex: 1; 
 `;
 
-export const Badge = styled.span`
+export const Badge = styled.div`
     background-color: #FF9B62;
     color: #fff;
     padding: 0.6rem 1rem;
