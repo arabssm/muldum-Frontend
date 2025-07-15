@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: 90%;
-    margin-top: 1rem;
     box-sizing: border-box;
 `;
 
@@ -27,7 +26,7 @@ export const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 1rem; 
-    width: 100%;
+    width: 94%;
 `;
 
 export const CardContainer = styled.div`
@@ -37,7 +36,7 @@ export const CardContainer = styled.div`
     background: #FAFAFA;
     border-radius: 0.625rem;
     margin-top: 1rem;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     cursor: pointer;
 
     &:hover {
