@@ -2,15 +2,9 @@ import { useSetRecoilState } from 'recoil';
 import { loginModalState, whereismypasswordModalState } from '@_all/atom/Modal';
 import styled from '@emotion/styled';
 import { useState } from 'react';
-<<<<<<< HEAD
-import emailIcon from '@_all/assets/login/email.svg';
-import passwordIcon from '@_all/assets/login/password.svg';
-import Login from '@_api/notice/notice'
-=======
 import emailIcon from '@_assets/login/email.svg';
 import passwordIcon from '@_assets/login/password.svg';
 import Login from '@_api/notice/notice';
->>>>>>> c2bb1eb (add)
 import { useNavigate } from 'react-router-dom';
 export default function LoginModal() {
   const navigate=useNavigate();

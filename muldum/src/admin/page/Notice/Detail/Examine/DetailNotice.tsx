@@ -3,11 +3,11 @@ import { useState } from 'react';
 import * as _ from './style';
 import data from '../data';
 import type { Notice } from '../data';
-import NavBar from 'src/admin/components/NavBar/NavBar';
+import NavBar from '@_all/component/sibebar/sidebar';
 import '@_styles';
-import Notfound from 'src/admin/components/NotFound/NotFound';
-import DeleteModal from 'src/admin/components/Modal/Delete/DeleteModal';
-import ConfirmDeleteModal from 'src/admin/components/Modal/Notice/ConfirmDelete';
+import Notfound from '@_component/Notfound/404';
+import DeleteModal from '@_modal/Delete/DeleteModal';
+import ConfirmDeleteModal from '@_modal/Delete/DeleteModal';
 import makeDocument from '../makeDocument';
 
 export default function NoticeDetail() {

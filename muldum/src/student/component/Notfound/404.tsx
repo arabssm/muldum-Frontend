@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
 import '@_styles';
-import NavBar from '@_components/sibebar/sidebar';
+import NavBar from '@_all/component/sibebar/sidebar';
 
 export default function Notfound() {
 const navigate = useNavigate();

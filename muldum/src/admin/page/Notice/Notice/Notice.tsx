@@ -4,11 +4,6 @@ import * as _ from './style';
 import '@_styles';
 import { icons } from './data';
 import Box from './Box';
-<<<<<<< HEAD
-import Sidebar from '@_all/component/sibebar/sidebar';
-=======
-import NavBar from '@_all/component/sibebar/sidebar';
->>>>>>> c2bb1eb (add)
 import Pagination from './Pagination';
 import { NoticeItem } from './type';
 
