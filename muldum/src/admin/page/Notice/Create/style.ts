@@ -111,3 +111,22 @@ export const TagButton = styled.button`
 export const ChangeImg = styled.input`
     display: none;
 `;
+
+export const SelectInput = styled.select`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3% 2%;
+    font-size: 1rem;
+    margin-bottom: 1.5%;
+    border-radius: 0.25rem;
+    border: 1px solid #D1D1D1;
+    color: #1D1D1D;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Paperlogy';
+`;
+
+export const option = styled.option`
+    font-family: 'Paperlogy';
+`
