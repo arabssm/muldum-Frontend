@@ -14,8 +14,8 @@ import SNotice from '@_page/notice/notice';
 import Object from '@_page/object/object';
 
 export default function App() {
-  const role = "TEACHER"; 
-  // const role = "STUDENT";
+  // const role = "TEACHER"; 
+  const role = "STUDENT";
 
   return (
     <Routes>
