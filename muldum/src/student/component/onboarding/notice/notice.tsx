@@ -30,7 +30,7 @@ const filtered = posts.filter(n =>
             key={notice.id}
             idx={notice.id}
             title={notice.title}
-            date={notice.created_at}
+            date={notice.createdAt}
           />
         ))}
       </_.BoxContainer>

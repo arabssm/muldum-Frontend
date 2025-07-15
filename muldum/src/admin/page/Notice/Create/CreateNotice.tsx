@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
 import NavBar from '@_all/component/sibebar/sidebar';
 import EditSuccess from '@_components/Modal/Notice/EditSuccess';
-import data from '../Detail/data';
 import '@_styles';
 import useNoticeState from './useNoticeState';
 import { Notice } from './type';

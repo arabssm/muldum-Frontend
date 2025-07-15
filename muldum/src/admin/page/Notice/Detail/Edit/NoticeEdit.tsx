@@ -93,7 +93,7 @@ export default function NoticeEdit() {
       const allUrls = [...serverUrls, ...uploadedUrls];
       const filesPayload = allUrls.map(url => ({ url }));
 
-      if (notice.team_id) {
+      if (notice.teamId) {
         await modifynotice(
           id,
           notice.title,
@@ -130,7 +130,7 @@ export default function NoticeEdit() {
         <_.PageTitle>공지사항 수정</_.PageTitle>
         <_.BoxGroup>
           <_.TextInput name="title" value={notice.title} onChange={handleChange} placeholder="공지 제목" />
-          <_.TextInput name="team_id" value={notice.team_id} onChange={handleChange} placeholder="팀 ID" />
+          <_.TextInput name="team_id" value={notice.teamId} onChange={handleChange} placeholder="팀 ID" />
 
           <_.TagBox>
                         <_.TagButton onClick={() => insertTag('제목1')}>h1</_.TagButton>

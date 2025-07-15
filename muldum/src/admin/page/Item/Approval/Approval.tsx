@@ -5,7 +5,7 @@ import "@_styles";
 import NavBar from "@_all/component/sibebar/sidebar";
 import ApprovalList from "@_components/Item/List/ApprovalList";
 import Clubs from "./ClubList";
-import Filter from "./Filter";
+import {submititem} from '../../../../api/object/apply'
 import ClubSelector from "@_components/Item/List/ClubSelector";
 import RejectModal from "@_modal/Approval/Rejectmodal";
 import ApprovalModal from "@_modal/Approval/ApprovalModal";
@@ -23,7 +23,16 @@ const Approval = () => {
     const [showRejectModal, setShowRejectModal] = useState(false);
 
     const navigate = useNavigate();
-
+    function SSubmit() {
+        if (!selectedItems || selectedItems.length === 0) {
+          alert("선택된 항목이 없습니다.");
+          return;
+        }
+      
+        submititem(selectedItems);          
+        setShowApproveModal(true);          
+        window.location.reload();            
+      }
     const toggleSelectAll = () => {
         if (selectAll) {
             setSelectedItems([]);
@@ -56,7 +65,7 @@ const Approval = () => {
                 {isPossible ? (
                     <>
                         <ClubSelector
-                            clubs={Clubs}
+                            clubs={Clubs.map(c => c.name)}
                             selectedClub={selectedClub}
                             setSelectedClub={setSelectedClub}
                         />
@@ -69,6 +78,7 @@ const Approval = () => {
 
                         {selectedClub ? (
                             <ApprovalList
+                                id={Clubs.find(c => c.name === selectedClub)?.id}
                                 selectAll={selectAll}
                                 selectedItems={selectedItems}
                                 setSelectedItems={setSelectedItems}
@@ -104,11 +114,18 @@ const Approval = () => {
             <NavBar />
             <_.Title>전공동아리 물품 승인</_.Title>
             <_.Subtitle>학생들이 신청한 물품들을 확인해요</_.Subtitle>
-            <Filter filter={filter} setFilter={setFilter} />
+            <_.ButtonArea>
+            <_.ApprovalButton onClick={() => setFilter('가능')} active={filter === '가능'}>
+                승인 가능
+            </_.ApprovalButton>
+            <_.ApprovalButton onClick={() => setFilter('불가능')} active={filter === '불가능'}>
+                승인 불가능
+            </_.ApprovalButton>
+        </_.ButtonArea>
             {renderContent()}
             <_.ButtonGroup>
                 <_.ApplyButton
-                    onClick={() => setShowApproveModal(true)}
+                    onClick={() => SSubmit()}
                     disabled={selectedItems.length === 0}
                 >
                     승인하기

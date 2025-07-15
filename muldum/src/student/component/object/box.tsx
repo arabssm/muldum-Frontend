@@ -21,9 +21,9 @@ export default function Box({ request, onReasonChange }: Props) {
   return (
     <_.Card>
       <_.CardRow>
-        <_.Cell flex="0 0 40px">{request.no}</_.Cell>
-        <_.Cell flex="1">{request.title}</_.Cell>
-        <_.Cell flex="0 0 60px">수량 {request.qty}</_.Cell>
+        <_.Cell flex="0 0 40px">{request.id}</_.Cell>
+        <_.Cell flex="1">{request.productName}</_.Cell>
+        <_.Cell flex="0 0 60px">수량 {request.quantity}</_.Cell>
         <_.Cell flex="0 0 100px">{request.status}</_.Cell>
       </_.CardRow>
       <_.ReasonRow onClick={() => !isEditing && setIsEditing(true)}>

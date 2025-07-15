@@ -61,7 +61,7 @@ export default function Detail() {
     setShowModal(false);
     setShowConfirmModal(true);
   };
-
+  const role="TEACHER"
   return (
     <_.Container>
       <NavBar />
@@ -72,10 +72,12 @@ export default function Detail() {
             <_.Addition>{date}</_.Addition>
             <_.Addition>작성자: 교사 {doc1.teacherName || '알 수 없음'}</_.Addition>
           </_.AdditionLeft>
+          {role==="TEACHER"&&
           <_.ButtonGroup>
             <button onClick={() => setShowModal(true)}>삭제하기</button>
             <button onClick={() => navigate(`/notice/edit/${doc1.id}`)}>수정하기</button>
           </_.ButtonGroup>
+        }
         </_.AdditionRow>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
         {doc1?.files?.map((file, idx) => (

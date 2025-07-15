@@ -1,33 +1,52 @@
-import profile from '@_assets/sidebar/profile.svg';
+import alarm from '@_assets/sidebar/alerticon.svg';
+import alarmActive from '@_assets/sidebar/color-alerticon.svg';
+
+import club from '@_assets/sidebar/ranking.svg'; 
+import clubActive from '@_assets/sidebar/color-ranking.svg'; 
+
+import date from '@_assets/sidebar/calender.svg';
+import dateActive from '@_assets/sidebar/color-calender.svg';
+
 import home from '@_assets/sidebar/home.svg';
-import ranking from '@_assets/sidebar/ranking.svg';
-import calender from '@_assets/sidebar/calender.svg';
-import check from '@_assets/sidebar/check.svg';
-import object from '@_assets/sidebar/object.svg';
-import alerticon from '@_assets/sidebar/alerticon.svg';
+import homeActive from '@_assets/sidebar/color-home.svg';
+
+import item from '@_assets/sidebar/object.svg';
+import itemActive from '@_assets/sidebar/color-object.svg';
+
+import notice from '@_assets/sidebar/check.svg';
+import noticeActive from '@_assets/sidebar/color-check.svg';
+
+import people from '@_assets/sidebar/profile.svg';
+import peopleActive from '@_assets/sidebar/color-ranking.svg';
+
 import setting from '@_assets/sidebar/setting.svg';
-import Chome from '@_assets/sidebar/color-home.svg';
-import Cranking from '@_assets/sidebar/color-ranking.svg';
-import Ccalender from '@_assets/sidebar/color-calender.svg';
-import Ccheck from '@_assets/sidebar/color-check.svg';
-import Cobject from '@_assets/sidebar/color-object.svg';
-import Calerticon from '@_assets/sidebar/color-alerticon.svg';
-import Gologin from '@_assets/sidebar/gologin.svg';
+import settingActive from '@_assets/sidebar/setting.svg'; 
+
+import teamspace from '@_assets/sidebar/ranking.svg';
+import teamspaceActive from '@_assets/sidebar/color-ranking.svg';
+
+import login from '@_assets/sidebar/gologin.svg';
+import profile from '@_assets/sidebar/profile.svg';
 
 export const icons = {
-  profile,
+  alarm,
+  alarmActive,
+  club,
+  clubActive,
+  date,
+  dateActive,
   home,
-  ranking,
-  calender,
-  check,
-  object,
-  alerticon,
+  homeActive,
+  item,
+  itemActive,
+  notice,
+  noticeActive,
+  people,
+  peopleActive,
   setting,
-  Chome,
-  Cranking,
-  Ccalender,
-  Ccheck,
-  Cobject,
-  Calerticon,
-  Gologin
+  settingActive,
+  teamspace,
+  teamspaceActive,
+  login,
+  profile,
 };
