@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
-
 import * as _ from './style';
 import NavBar from '@_all/component/sibebar/sidebar';
 import type { Props } from './types';
-import {tchitem} from '../../../../api/object/apply'
+import {tchitem} from '../../../../api/object/apply';
+import DetailItem from '@_components/Modal/Delete/DeleteModal';
+
 export default function ApprovalList({
   id,
   selectedItems,
   setSelectedItems,
   setAllItemIds,
+  
 }: Props & { setAllItemIds: (ids: number[]) => void }) {
   const [data, setData] = useState<any[]>([]);
   const [reasons, setReasons] = useState<{ [id: number]: string }>({});
@@ -34,6 +36,19 @@ export default function ApprovalList({
       });
   }, [id, setAllItemIds]);
 
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedName, setSelectedName] = useState('');
+
+  const handleItemClick = (name: string) => {
+    setSelectedName(name);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedName('');
+  };
+
   return (
     <_.Container>
       <NavBar />
@@ -56,6 +71,9 @@ export default function ApprovalList({
           </_.ItemRow>
         ))}
       </_.ListWrapper>
+        {modalOpen && (
+        <DetailItem name={selectedName} onClose={closeModal} />
+      )}
     </_.Container>
   );
 }
