@@ -14,15 +14,14 @@ import SNotice from '@_page/notice/notice';
 import Object from '@_page/object/object';
 
 export default function App() {
-  const role = "TEACHER"; 
-  console.log()
-  // const role = "STUDENT";
+  // const role = "TEACHER"; 
+  const role = "STUDENT";
 
   return (
     <Routes>
-      <Route path="/" element={role === "TEACHER" ? <Main /> : <Onboarding />} />
-      <Route path="/notice" element={role === "TEACHER" ? <Notice /> : <SNotice />} />
-      <Route path="/project-approval" element={role === "TEACHER" ? <Approval /> : <Object />} />
+      <Route path="/" element={role === "STUDENT" ? <Onboarding /> : <Main />} />
+      <Route path="/notice" element={role === "STUDENT" ? <SNotice /> : <Notice />} />
+      <Route path="/project-approval" element={role === "STUDENT" ? <Object /> : <Approval />} />
       <Route path="/notice/:id" element={<DetailNotice />} />
       <Route path="/create-notice" element={<CreateNotice />} />
       <Route path="/notice/edit/:id" element={<NoticeEdit />} />
