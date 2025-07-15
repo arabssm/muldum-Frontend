@@ -53,6 +53,7 @@ export const Content = styled.div`
 export const BackButton = styled.button`
     margin-top: 5%;
     padding: 1% 2%;
+    margin-left: 8%;
     font-size: 1.1rem;
     background-color: #FF9B62;
     color: #fff;
@@ -93,3 +94,8 @@ export const ButtonGroup = styled.div`
         }
     }
 `;
+
+export const pic = styled.img`
+    width: 100%;
+    margin-top: 2%;
+`; 

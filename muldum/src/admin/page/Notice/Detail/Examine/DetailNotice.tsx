@@ -77,30 +77,30 @@ export default function Detail() {
             <button onClick={() => navigate(`/notice/edit/${doc1.id}`)}>수정하기</button>
           </_.ButtonGroup>
         </_.AdditionRow>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+        {doc1?.files?.map((file, idx) => (
+          <_.pic
+            key={file.fileId ?? idx}
+            src={`${import.meta.env.VITE_API_URL}${file.filePath}`}
+            alt={file.fileName}
+            style={{ width: 300, borderRadius: 6 }}
+          />
+        ))}
+      </div>
         {doc1.image && <_.Image src={doc1.image} alt="notice" />}
         {doc1.imageCaption && <_.ImageCaption>{doc1.imageCaption}</_.ImageCaption>}
         <_.Content>
             {doc1?.content ? makeDocument(doc1.content) : '내용을 불러올 수 없습니다.'}
         </_.Content>
-        <_.BackButton onClick={() => navigate(-1)}>이전</_.BackButton>
       </_.Wrapper>
-      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-        {doc1?.files?.map((file, idx) => (
-          <img
-            key={file.fileId ?? idx}
-            src={`${import.meta.env.VITE_API_URL}${file.filePath}`}
-            alt={file.fileName}
-            style={{ width: 120, borderRadius: 6 }}
-          />
-        ))}
-      </div>
+      <_.BackButton onClick={() => navigate(-1)}>이전</_.BackButton>
       {showModal && (
         <DeleteModal
           onCancel={() => setShowModal(false)}
           onConfirm={handleDelete}
         />
       )}
-
+      
       {showConfirmModal && (
         <ConfirmDeleteModal
           onClose={() => {
