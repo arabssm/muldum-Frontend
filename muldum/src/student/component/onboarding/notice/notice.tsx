@@ -2,7 +2,7 @@ import Header11 from './noticeHeader';
 import Box from './box';
 import * as _ from './style';
 import { useEffect,useState } from 'react';
-import getNotice from '../../../../api/notice/notice'
+import getNotice from '@_api/notice/notice'
 export default function Notice() {
   const [search, setSearch] = useState('');
   
