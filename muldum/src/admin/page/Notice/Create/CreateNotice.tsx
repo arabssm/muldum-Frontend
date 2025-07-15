@@ -102,7 +102,7 @@ export default function CreateNotice() {
                     <_.SelectInput
                         type="text"
                         name="author"
-                        value={notice.author || notice.team_id}
+                        value={notice.author}
                         onChange={handleChange}
                         placeholder="누구에게 공지할 지 등록하세요"
                     >
