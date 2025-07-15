@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Main from '@_main/Main';
-import Notice from '@_notice/Notice/Notice';
+import Notice from '@_pages/Notice/Notice/Notice';
 import DetailNotice from '@_notice/Detail/Examine/DetailNotice';
 import CreateNotice from '@_notice/Create/CreateNotice';
 import NotFound from '@_components/NotFound/NotFound';
@@ -15,6 +15,7 @@ import Object from '@_page/object/object';
 
 export default function App() {
   const role = "TEACHER"; 
+  console.log()
   // const role = "STUDENT";
 
   return (
@@ -26,6 +27,7 @@ export default function App() {
       <Route path="/create-notice" element={<CreateNotice />} />
       <Route path="/notice/edit/:id" element={<NoticeEdit />} />
       <Route path="/project-choice" element={<ProjectChoice />} />
+      <Route path="/object" element={<ProjectChoice />} />
       <Route path="/team-space" element={<Teamspace />} />
       <Route path="/club-history" element={<ClubHistory />} />
       <Route path="*" element={<NotFound />} />
