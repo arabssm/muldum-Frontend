@@ -12,7 +12,6 @@ export const Title = styled.h2`
     color: #1d1d1d;
     font-weight: 600;
     margin-right: 54%;
-    font-weight: 500;
 `;
 
 export const SearchWrapper = styled.div`
