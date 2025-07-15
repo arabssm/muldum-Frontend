@@ -99,13 +99,27 @@ export default function CreateNotice() {
                         onChange={handleChange}
                         placeholder="2008.12.09 ~ 2009.12.19"
                     />
-                    <_.TextInput
+                    <_.SelectInput
                         type="text"
                         name="author"
-                        value={notice.author}
+                        value={notice.author || notice.team_id}
                         onChange={handleChange}
                         placeholder="누구에게 공지할 지 등록하세요"
-                    />
+                    >
+                        <option value="">누구에게 공지할 지 등록하세요</option>
+                        <option value="ara">아라</option>
+                        <option value="andamiro">안다미로</option>
+                        <option value="insert">인서트</option>
+                        <option value="odessey">오디세이</option>
+                        <option value="pluto">플루토</option>
+                        <option value="tera">테라</option>
+                        <option value="solvit">솔빗</option>
+                        <option value="Echo">Echo</option>
+                        <option value="Haro">Haro</option>
+                        <option value="Baro">Baro</option>
+                        <option value="Paletto">Paletto</option>
+                        <option value="PARADOX">PARADOX</option>
+                    </_.SelectInput>
                     <_.TagBox>
                         <_.TagButton onClick={() => insertTag('제목1')}>h1</_.TagButton>
                         <_.TagButton onClick={() => insertTag('제목2')}>h2</_.TagButton>
