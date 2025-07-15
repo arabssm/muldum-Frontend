@@ -1,8 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import * as _ from './style';
-import data from '../data';
-import type { Notice } from '../data';
+import data, { Notice } from '../data';
 import NavBar from '@_all/component/sibebar/sidebar';
 import '@_styles';
 import Notfound from '@_component/Notfound/404';
@@ -60,11 +59,13 @@ return (
         )}
 
         {showConfirmModal && (
-            <ConfirmDeleteModal onClose={() => {
+            <ConfirmDeleteModal
+                onCancel={() => {
                 setShowConfirmModal(false);
                 navigate('/notice');
-            }} />
-        )}
+                }}
+            />
+            )}
     </_.Container>
 );
 }
