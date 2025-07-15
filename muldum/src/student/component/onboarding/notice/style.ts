@@ -4,14 +4,14 @@ export const Header = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
-    margin-left: 4.5rem;
-    margin-top: 2rem;
+    margin-top: 0.6rem;
 `;
 
 export const Title = styled.h2`
     font-size: 1.5rem;
     color: #1d1d1d;
-    margin-right: 46.2%;
+    font-weight: 600;
+    margin-right: 54%;
     font-weight: 500;
 `;
 

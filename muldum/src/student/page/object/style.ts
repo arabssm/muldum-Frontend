@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 export const PageWrapper = styled.div`
     display: flex;
     height: 100vh;
-    margin-left: 3%;
 `;
 
 export const Container = styled.div`
@@ -11,8 +10,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin-left: 13.75rem;
-    padding: 2rem 5%;
+    margin-left: 8rem;
+    padding: 0% 5%;
     box-sizing: border-box;
 `;
 
@@ -32,7 +31,7 @@ export const Header = styled.div`
 `;
 
 export const Titles = styled.div`
-    h1 { margin: 0; font-size: 1.75rem; font-weight: 500; margin-bottom: 4%; }
+    h1 { margin: 0; font-size: 1.5rem; font-weight: 500; margin-bottom: 4%; }
     h3 { margin: 0.25rem 0 0; font-size: 1rem; color: #666; font-weight: 400; }
 `;
 
