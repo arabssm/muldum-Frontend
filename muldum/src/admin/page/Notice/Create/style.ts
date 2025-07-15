@@ -130,3 +130,9 @@ export const SelectInput = styled.select`
 export const option = styled.option`
     font-family: 'Paperlogy';
 `
+
+export const Upload = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+`;

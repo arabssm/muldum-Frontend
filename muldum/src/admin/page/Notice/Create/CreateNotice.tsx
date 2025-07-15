@@ -140,7 +140,11 @@ export default function CreateNotice() {
                         onChange={handleImageChange}
                     />
                     <_.Picture onClick={() => document.getElementById('image-upload')?.click()}>
-                        이미지를 클릭하여 추가해주세요
+                        {notice.image ? (
+                            <_.Upload src={notice.image} alt="upload img" />
+                        ) : (
+                            '이미지를 클릭하여 추가해주세요'
+                        )}
                     </_.Picture>
                     <_.EnrollButton onClick={handleSubmit}>등록하기</_.EnrollButton>
                 </_.BoxGroup>
