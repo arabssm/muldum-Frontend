@@ -2,9 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import * as _ from './style';
 import '@_styles';
 import specialty from '@_assets/Item/specialty.svg';
-import autonomy from '@_assets/item/autonomy.svg';
-import net from '@_assets/item/net.svg';
-import congrats from '@_assets/item/congrats.svg';
+import autonomy from '@_assets/Item/autonomy.svg';
+import net from '@_assets/Item/net.svg';
+import congrats from '@_assets/Item/congrats.svg';
 
 export default function Menu() {
     const navigate = useNavigate();

@@ -4,7 +4,7 @@ import * as _ from './style';
 import '@_styles';
 import { icons } from './data';
 import Box from './Box';
-import Sidebar from '@_all/component/Slide/Slide';
+import Sidebar from '@_all/component/sibebar/sidebar';
 import Pagination from './Pagination';
 import { NoticeItem } from './type';
 
