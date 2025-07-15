@@ -28,7 +28,7 @@ export default function All() {
       <_.Container>
         <_.Main>
           <_.Header>
-            <h1>전체 물품 신청 내역</h1>
+            <_.AllTitle>전체 물품 신청 내역</_.AllTitle>
           </_.Header>
           <_.ListWrapper>
           {requests

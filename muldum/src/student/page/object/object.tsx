@@ -147,7 +147,7 @@ export default function Object() {
 
         <_.Footer>
           <_.FooterLink>물품 신청 가이드 보기 &gt;</_.FooterLink>
-          <_.FooterLink onClick={()=>nav("/object/all")}>전체보기</_.FooterLink>
+          <_.FooterLink onClick={()=>nav("/object/all")}>신청 물품 내역 조회 ›</_.FooterLink>
         </_.Footer>
       </_.Container>
     </_.PageWrapper>

@@ -31,8 +31,15 @@ export const Header = styled.div`
 `;
 
 export const Titles = styled.div`
-    h1 { margin: 0; font-size: 1.5rem; font-weight: 500; margin-bottom: 4%; }
+    h1 { margin: 0; font-size: 1.5rem; font-weight: 600; margin-bottom: 4%; }
     h3 { margin: 0.25rem 0 0; font-size: 1rem; color: #666; font-weight: 400; }
+`;
+
+export const AllTitle = styled.div`
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1d1d1d;
+    margin-top: 1rem;
 `;
 
 export const BudgetBox = styled.div`
