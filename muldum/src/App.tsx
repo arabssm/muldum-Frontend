@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Main from '@_main/Main';
 import Notice from '@_notice/Notice/Notice';
 import DetailNotice from '@_notice/Detail/Examine/DetailNotice';
@@ -9,8 +9,6 @@ import ProjectChoice from '@_pages/Item/Choice/ProjectChoice';
 import Approval from '@_pages/Item/Approval/Approval';
 import Teamspace from '@_pages/Teamspace/Teamspace';
 import ClubHistory from '@_pages/ClubHistory/ClubHistory';
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
 import Onboarding from '@_page/onboarding/index';
 import SNotice from '@_page/notice/notice';
 import Object from '@_page/object/object';
@@ -34,11 +32,3 @@ export default function App() {
     </Routes>
   );
 }
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>
-);
