@@ -2,12 +2,13 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as _ from './style';
 import '@_styles';
-import { icons } from './data';
+import Search from '../../../../all/assets/onboarding/search.svg';
+import Add from '../../../../all/assets/add.svg'
 import Box from './Box';
-import Sidebar from '@_all/component/sibebar/sidebar';
+import NavBar from '../../../../all/component/sibebar/sidebar';
 import Pagination from './Pagination';
 import { NoticeItem } from './type';
-
+import {getNotice} from '../../../../api/notice/notice';
 export default function Notice() {
     const [notices, setNotices] = useState<NoticeItem[]>([]);
     const [search, setSearch] = useState('');
@@ -15,34 +16,40 @@ export default function Notice() {
     const navigate = useNavigate();
     
 
-    useEffect(() => {
-        const saved = localStorage.getItem('notices');
-        if (saved) {
-        setNotices(JSON.parse(saved));
-        }
-    }, []);
+  const [posts, setPosts] = useState([]);
+  const [totalPages,setTotalpages]=useState(1);
+  useEffect(() => {
+    getNotice(page)
+      .then((data) => {
+        setPosts(data?.content ?? []);
+        setTotalpages(data.totalPages);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log("게시물을 불러오는 데 실패했습니다.", err);
+      });
+  }, []);
 
-    const filtered = notices.filter(item =>
-        item.title.toLowerCase().includes(search.toLowerCase())
-    );
+  const filtered = posts.filter(n =>
+    n.title.toLowerCase().includes(search.toLowerCase())
+  );
 
-    const totalPages = Math.ceil(filtered.length / 10);
-    const startIdx = (page - 1) * 10;
-    const paginated = filtered.slice(startIdx, startIdx + 10);
+  
+  const startIdx = (page - 1) * 10;
+  const paginated = filtered.slice(startIdx, startIdx + 10);
 
-    const handlePageChange = (newPage: number) => {
-        if (newPage >= 1 && newPage <= totalPages) {
-        setPage(newPage);
-        }
-    };
-
+  const handlePageChange = (newPage: number) => {
+      if (newPage >= 1 && newPage <= totalPages) {
+      setPage(newPage);
+      }
+  };
     return (
         <_.Container>
-        <Sidebar />
+        <NavBar />
         <_.Wrapper>
             <_.PageTitle>공지사항</_.PageTitle>
             <_.SearchBar>
-            <img src={icons.Search} alt="Search" />
+            <img src={Search} alt="Search" />
             <_.SearchInput
                 type="text"
                 placeholder="공지사항 검색"
@@ -54,13 +61,18 @@ export default function Notice() {
             />
             </_.SearchBar>
             <_.Add
-            src={icons.Add}
+            src={Add}
             alt="Add"
             onClick={() => navigate('/create-notice')}
             />
         </_.Wrapper>
-        {paginated.map(item => (
-            <Box key={item.idx} idx={item.idx} title={item.title} date={item.date} />
+        {filtered.map(notice => (
+            <Box
+            key={notice.id}
+            idx={notice.id}
+            title={notice.title}
+            date={notice.createdAt} 
+          />
         ))}
         <Pagination
             currentPage={page}

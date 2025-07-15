@@ -1,4 +1,4 @@
-import axiosInstance from "../lib/axiosInatanse";
+import axiosInstance from "../../lib/axiosInatance";
 
 export default async function Apply(name1,number,price,link,source,reason,team_id) {
     try {
