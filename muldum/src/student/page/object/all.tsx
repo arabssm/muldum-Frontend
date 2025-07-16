@@ -1,17 +1,13 @@
 import { useEffect, useState } from 'react';
 import * as _ from './style'; 
-import Sidebar from '../../../all/component/sibebar/sidebar';
-import {Box1} from '../../component/object/box';
-import type { Request } from '../../component/object/types';
-import { getallApply } from '../../../api/object/apply';
+import Sidebar from '@_all/component/sibebar/sidebar';
+import {Box1} from '@_component/object/box';
+import type { Request } from '@_component/object/types';
+import { getallApply } from '@_api/object/apply';
 
 export default function All() {
   const [requests, setRequests] = useState<Request[]>([]);
-  const handleReasonChange = (id: string, newReason: string) => {
-    setRequests((prev) =>
-      prev.map((r) => (r.id === id ? { ...r, reason: newReason } : r))
-    );
-  };
+
   useEffect(() => {
     getallApply(1)
       .then((data) => {
@@ -27,9 +23,11 @@ export default function All() {
       <Sidebar />
       <_.Container>
         <_.Main>
-          <_.Header>
-            <_.AllTitle>전체 물품 신청 내역</_.AllTitle>
-          </_.Header>
+          <_.TextContainer>
+            <_.AllTitle>전공동아리 물품 재신청</_.AllTitle>
+            <_.Subtitle>신청 거부 당한 물품을 확인하고 비슷한 상품을 구입해요</_.Subtitle>
+          </_.TextContainer>
+          <_.AllTitle>신청한 물품</_.AllTitle>
           <_.ListWrapper>
               {requests
                 .filter(r => r.status !== "INTEMP")
@@ -39,11 +37,7 @@ export default function All() {
                   request={{
                     ...r,
                     status:
-                      r.status === "APPROVED"
-                        ? "승인됨"
-                        : r.status === "PENDING"
-                        ? "대기중"
-                        : r.status === "REJECTED"
+                      r.status === "REJECTED"
                         ? "거절됨"
                         : r.status,
                   }}

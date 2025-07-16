@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import type { Props,Request } from './types';
-import * as _ from './style';
+import { useState, useEffect, useRef } from "react";
+import type { Props, Request } from "./types";
+import * as _ from "./style";
 
 export default function Box({ request, onReasonChange }: Props) {
   const [isEditing, setIsEditing] = useState(false);
@@ -20,24 +20,33 @@ export default function Box({ request, onReasonChange }: Props) {
 
   return (
     <_.Card>
-      <_.CardRow>
-        <_.Cell flex="0 0 40px">{request.id}</_.Cell>
-        <_.Cell flex="1">{request.productName}</_.Cell>
-        <_.Cell flex="0 0 60px">수량 {request.quantity}</_.Cell>
-        <_.Cell flex="0 0 100px">{request.status}</_.Cell>
-      </_.CardRow>
-      <_.ReasonRow onClick={() => !isEditing && setIsEditing(true)}>
+      <_.FieldGroup>
+        <_.Input
+          type="text"
+          value={request.productName}
+          readOnly
+          placeholder="원래 있던 거 가져오기"
+        />
+      </_.FieldGroup>
+
+      <_.FieldGroup>
+        <_.Label>재신청 사유</_.Label>
         {isEditing ? (
-          <_.ReasonTextarea
+          <_.Textarea
             ref={textareaRef}
             value={reason}
-            onChange={e => setReason(e.target.value)}
+            onChange={(e) => setReason(e.target.value)}
             onBlur={finishEdit}
+            placeholder="재신청 사유를 10자 이상 입력해 주세요"
           />
         ) : (
-          reason || '구매 사유를 입력해 주세요'
+          <_.TextareaDisplay onClick={() => setIsEditing(true)}>
+            {reason || "재신청 사유를 10자 이상 입력해 주세요"}
+          </_.TextareaDisplay>
         )}
-      </_.ReasonRow>
+      </_.FieldGroup>
+
+      <_.SubmitButton>재신청</_.SubmitButton>
     </_.Card>
   );
 }
@@ -58,36 +67,36 @@ export function Box1({ request }: { request: Request }) {
   };
 
   const handleResubmit = () => {
-    alert(`${request.id}번 재신청!`);
+    alert(`${request.id}번 재신청이 완료되었습니다.`);
   };
 
   return (
-    <_.Card>
-      <_.CardRow>
-        <_.Cell flex="0 0 40px">{request.id}</_.Cell>
-        <_.Cell flex="1">{request.productName}</_.Cell>
-        <_.Cell flex="0 0 60px">수량 {request.quantity}</_.Cell>
-        <_.Cell flex="0 0 100px">{request.status}</_.Cell>
-      </_.CardRow>
+      <_.Card>
+        <_.FieldGroup>
+          <_.Label>구입한 물품</_.Label>
+          <_.Input type="text" value={request.productName} readOnly />
+        </_.FieldGroup>
 
-      <_.ReasonRow onClick={() => !isEditing && setIsEditing(true)}>
-        {isEditing ? (
-          <_.ReasonTextarea
-            ref={textareaRef}
-            value={reason}
-            onChange={e => setReason(e.target.value)}
-            onBlur={finishEdit}
-          />
-        ) : (
-          reason || '구매 사유를 입력해 주세요'
+        <_.FieldGroup>
+          <_.Label>재신청 사유</_.Label>
+          {isEditing ? (
+            <_.Textarea
+              ref={textareaRef}
+              value={reason}
+              onChange={(e) => setReason(e.target.value)}
+              onBlur={finishEdit}
+              placeholder="재신청 사유를 10자 이상 입력해 주세요"
+            />
+          ) : (
+            <_.TextareaDisplay onClick={() => setIsEditing(true)}>
+              {reason || "재신청 사유를 10자 이상 입력해 주세요"}
+            </_.TextareaDisplay>
+          )}
+        </_.FieldGroup>
+
+        {request.status === "거절됨" && (
+          <_.SubmitButton onClick={handleResubmit}>재신청</_.SubmitButton>
         )}
-      </_.ReasonRow>
-
-      {request.status === "거절됨" && (
-        <_.ResubmitButton onClick={handleResubmit}>
-          재신청하기
-        </_.ResubmitButton>
-      )}
-    </_.Card>
+      </_.Card>
   );
 }

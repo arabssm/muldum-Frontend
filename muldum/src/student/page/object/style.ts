@@ -35,11 +35,20 @@ export const Titles = styled.div`
     h3 { margin: 0.25rem 0 0; font-size: 1rem; color: #666; font-weight: 400; }
 `;
 
+export const Subtitle = styled.div`
+    display: flex;
+    justify-content: left;
+    font-size: 1.1rem;
+    color: #707070;
+    margin-bottom: 3%;
+`;
+
 export const AllTitle = styled.div`
     font-size: 1.5rem;
     font-weight: 600;
     color: #1d1d1d;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 `;
 
 export const BudgetBox = styled.div`
@@ -180,6 +189,7 @@ export const ListWrapper = styled.div`
     flex: 1;
     overflow-y: auto;
     padding-right: 0.5rem;
+    margin-top: 3%;
 `;
 
 export const Footer = styled.div`
@@ -196,4 +206,10 @@ export const FooterLink = styled.a`
     text-decoration: none;
     cursor: pointer;
     &:hover { text-decoration: underline; }
+`;
+
+export const TextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
