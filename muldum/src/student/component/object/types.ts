@@ -1,7 +1,7 @@
 export interface Request {
-    no: string;
-    title: string;
-    qty: number;
+    id: string;
+    productName: string;
+    quantity: number;
     status: string;
     reason: string;
 }

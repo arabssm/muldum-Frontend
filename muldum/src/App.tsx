@@ -18,8 +18,8 @@ import { useRecoilValue } from 'recoil';
 import { loginModalState, whereismypasswordModalState } from "@_all/atom/Modal";
 import LoginModal from '@_component/modal/login/login';
 export default function App() {
-  const role = "TEACHER"; 
-  //const role = "STUDENT";
+  // const role = "TEACHER"; 
+  const role = "STUDENT";
   const isOpen = useRecoilValue(loginModalState)
   const isOpen2=useRecoilValue(whereismypasswordModalState);
 

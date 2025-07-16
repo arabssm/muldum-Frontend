@@ -41,3 +41,16 @@ export const ReasonTextarea = styled.textarea`
     line-height: 1.5;
     outline: none;
 `;
+export const ResubmitButton = styled.button`
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #ff6767;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover {
+    background-color: #ff3d3d;
+  }
+`;
