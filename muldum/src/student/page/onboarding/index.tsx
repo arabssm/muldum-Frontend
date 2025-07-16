@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-
 import NavBar from '@_all/component/sibebar/sidebar';
 import Slbe from '@_all/component/Slide/Slide';
 import Menu from '@_all/component/menu/menu';
@@ -25,6 +24,7 @@ const Container = styled.div`
     margin-left: 3%;
     margin-top: 2%;
     overflow: auto;
+    overflow-x: hidden;
 `;
 
 const King =styled.div`
