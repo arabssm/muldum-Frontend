@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import type { Props, Request } from "./types";
 import * as _ from "./style";
-
+import { useNavigate } from "react-router-dom";
 export default function Box({ request, onReasonChange }: Props) {
   const [isEditing, setIsEditing] = useState(false);
   const [reason, setReason] = useState(request.reason);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const nav=useNavigate();
+  const isEditable = request.status === "PENDING";
 
   useEffect(() => {
     if (isEditing && textareaRef.current) {
@@ -20,83 +22,35 @@ export default function Box({ request, onReasonChange }: Props) {
 
   return (
     <_.Card>
-      <_.FieldGroup>
-        <_.Input
-          type="text"
-          value={request.productName}
-          readOnly
-          placeholder="원래 있던 거 가져오기"
-        />
-      </_.FieldGroup>
-
-      <_.FieldGroup>
-        <_.Label>재신청 사유</_.Label>
+<_.CardRow
+  onClick={() => {
+    console.log(request.status);
+    if (request.status.toUpperCase() === "거절됨") {
+      nav(`/object/detail/${request.id}?name=${request.productName}`);
+    }
+  }}
+>
+        <_.Cell flex="0 0 40px">{request.id}</_.Cell>
+        <_.Cell flex="1">{request.productName}</_.Cell>
+        <_.Cell flex="0 0 60px">수량 {request.quantity}</_.Cell>
+        <_.Cell flex="0 0 100px">{request.status}</_.Cell>
+      </_.CardRow>
+      <_.ReasonRow
+        onClick={() => {
+          if (!isEditing && isEditable) setIsEditing(true);
+        }}
+      >
         {isEditing ? (
-          <_.Textarea
+          <_.ReasonTextarea
             ref={textareaRef}
             value={reason}
-            onChange={(e) => setReason(e.target.value)}
+            onChange={e => setReason(e.target.value)}
             onBlur={finishEdit}
-            placeholder="재신청 사유를 10자 이상 입력해 주세요"
           />
         ) : (
-          <_.TextareaDisplay onClick={() => setIsEditing(true)}>
-            {reason || "재신청 사유를 10자 이상 입력해 주세요"}
-          </_.TextareaDisplay>
+          reason || "구매 사유를 입력해 주세요"
         )}
-      </_.FieldGroup>
-
-      <_.SubmitButton>재신청</_.SubmitButton>
+      </_.ReasonRow>
     </_.Card>
-  );
-}
-
-export function Box1({ request }: { request: Request }) {
-  const [isEditing, setIsEditing] = useState(false);
-  const [reason, setReason] = useState(request.reason);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {
-    if (isEditing && textareaRef.current) {
-      textareaRef.current.focus();
-    }
-  }, [isEditing]);
-
-  const finishEdit = () => {
-    setIsEditing(false);
-  };
-
-  const handleResubmit = () => {
-    alert(`${request.id}번 재신청이 완료되었습니다.`);
-  };
-
-  return (
-      <_.Card>
-        <_.FieldGroup>
-          <_.Label>구입한 물품</_.Label>
-          <_.Input type="text" value={request.productName} readOnly />
-        </_.FieldGroup>
-
-        <_.FieldGroup>
-          <_.Label>재신청 사유</_.Label>
-          {isEditing ? (
-            <_.Textarea
-              ref={textareaRef}
-              value={reason}
-              onChange={(e) => setReason(e.target.value)}
-              onBlur={finishEdit}
-              placeholder="재신청 사유를 10자 이상 입력해 주세요"
-            />
-          ) : (
-            <_.TextareaDisplay onClick={() => setIsEditing(true)}>
-              {reason || "재신청 사유를 10자 이상 입력해 주세요"}
-            </_.TextareaDisplay>
-          )}
-        </_.FieldGroup>
-
-        {request.status === "거절됨" && (
-          <_.SubmitButton onClick={handleResubmit}>재신청</_.SubmitButton>
-        )}
-      </_.Card>
   );
 }

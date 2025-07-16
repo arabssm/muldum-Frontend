@@ -13,12 +13,13 @@ import Onboarding from '@_page/onboarding/index';
 import SNotice from '@_page/notice/notice';
 import Object from '@_page/object/object';
 import All from '@_page/object/all';
+import Resendpage from '@_page/object/resend';
 import PasswordModal from '@_component/modal/password/password';
 import { useRecoilValue } from 'recoil';
 import { loginModalState, whereismypasswordModalState } from "@_all/atom/Modal";
 import LoginModal from '@_component/modal/login/login';
 export default function App() {
-  // const role = "TEACHER"; 
+  //const role = "TEACHER"; 
   const role = "STUDENT";
   const isOpen = useRecoilValue(loginModalState)
   const isOpen2=useRecoilValue(whereismypasswordModalState);
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/project-choice" element={<ProjectChoice />} />
         <Route path="/object" element={<ProjectChoice />} />
         <Route path="/object/all" element={<All />} />
+        <Route path="/object/detail/:id" element={<Resendpage />} />
         <Route path="/team-space" element={<Teamspace />} />
         <Route path="/club-history" element={<ClubHistory />} />
         <Route path="*" element={<NotFound />} />

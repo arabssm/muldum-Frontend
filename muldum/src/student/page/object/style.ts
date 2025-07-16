@@ -111,14 +111,26 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-    flex: 1 1 12.5rem;
-    height: 2.5rem;
-    padding: 0 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    font-family: 'Paperlogy';
+  flex: 1 1 12.5rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-family: 'Paperlogy';
 `;
+
+export const Input1 = styled.input`
+  height: 3rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Paperlogy';
+`;
+
+
 
 export const FullWidthInput = styled(Input)`
     flex: 1 1 100%;
@@ -208,8 +220,63 @@ export const FooterLink = styled.a`
     &:hover { text-decoration: underline; }
 `;
 
+export const Title = styled.h1`
+  font-size: 24px;
+  font-weight: bold;
+`;
+
+export const InputBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+
+export const Textarea = styled.textarea`
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 100px;
+  resize: none;
+`;
+
+export const RejectButton = styled.button`
+  align-self: flex-end;
+  background-color: #ff9a5a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+`;
+
+export const ProductList = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+`;
+
+export const ProductCard = styled.div`
+  width: 160px;
+  height: 120px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+`;
+
+export const ProductCategory = styled.div`
+  font-size: 12px;
+  color: #ff6833;
+`;
+
+export const ProductName = styled.div`
+  font-weight: 600;
+  font-size: 14px;
+`;
+
 export const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  margin-bottom: 30px;
 `;
