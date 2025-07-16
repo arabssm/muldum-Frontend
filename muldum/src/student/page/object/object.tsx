@@ -34,7 +34,7 @@ export default function Object() {
       const domain = hostname.replace(/^www\./, ''); 
       const namePart = domain.split('.')[0]; 
       const namePart1 = namePart.toUpperCase();
-      const data = await Apply(item, qty, price, link, namePart1, reason, teamid);
+      await Apply(item, qty, price, link, namePart1, reason, teamid);
       window.location.reload();
     } catch (err) {
       console.error("신청 실패:", err);

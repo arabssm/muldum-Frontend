@@ -136,3 +136,14 @@ export const Upload = styled.img`
     height: 100%;
     object-fit: cover;
 `;
+export const CheckboxGroup = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+`;

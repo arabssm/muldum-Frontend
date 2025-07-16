@@ -10,10 +10,10 @@ export default function ApprovalList({
   selectedItems,
   setSelectedItems,
   setAllItemIds,
-  
-}: Props & { setAllItemIds: (ids: number[]) => void }) {
-  const [data, setData] = useState<any[]>([]);
-  const [reasons, setReasons] = useState<{ [id: number]: string }>({});
+  reasons,
+  setReasons,
+}: Props & { setAllItemIds: (ids: number[]) => void, reasons: any, setReasons: any }) {
+  const [data, setData] = useState<any[]>([]);  
   const handleReasonChange = (id: number, value: string) => {
     setReasons(prev => ({ ...prev, [id]: value }));
   };
@@ -64,10 +64,12 @@ export default function ApprovalList({
             <_.ItemName href={item.productLink} target="_blank">
               {item.productName}
             </_.ItemName>
-          <_.ItemInput
-            placeholder={item.reason}
-            onChange={(e) => handleReasonChange(item.id, e.target.value)}
-          />
+            <_.ItemInput
+  placeholder={item.reason}
+  value={reasons[item.id] || ''}
+  onChange={(e) => handleReasonChange(item.id, e.target.value)}
+/>
+
           </_.ItemRow>
         ))}
       </_.ListWrapper>

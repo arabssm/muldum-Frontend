@@ -8,7 +8,7 @@ export default async function Apply(name1,number,price,link,source,reason,team_i
         "quantity":number,
         "price":price,
         "productLink":link,
-        "itemsource":source,
+        "itemSource":source,
         "reason":reason
       });
   
@@ -98,6 +98,19 @@ export async function finalapply(teamid) {
       const res = await axiosInstance.post(`/tch/items/submit`,{
         "itemIds":items
       });
+      if (res.status !== 200) {
+        return res.status;
+      }
+      return res.data;
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
+  }
+  export async function nosubmititem(items) {
+    console.log(items);
+    try {
+      const res = await axiosInstance.post(`/tch/items/reject`,items);
       if (res.status !== 200) {
         return res.status;
       }

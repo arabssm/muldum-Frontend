@@ -85,7 +85,7 @@ export async function getNotice(page) {
         "content":content,
         "attachments":files,
         "status":"TEAM",
-        "teamId":1,
+        "teamId":team_id,
         "teacher":"최병준"
       });
       if (res.status !== 201) {

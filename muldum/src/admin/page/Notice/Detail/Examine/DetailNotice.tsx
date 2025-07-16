@@ -80,14 +80,15 @@ export default function Detail() {
         }
         </_.AdditionRow>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-        {doc1?.files?.map((file, idx) => (
-          <_.pic
-            key={file.fileId ?? idx}
-            src={`${import.meta.env.VITE_API_URL}${file.filePath}`}
-            alt={file.fileName}
-            style={{ width: 300, borderRadius: 6 }}
-          />
-        ))}
+              {doc1?.files?.map((file, idx) => (
+                <_.pic
+                  key={file.fileId ?? idx}
+                  src={`${import.meta.env.VITE_API_URL}${file.filePath}`}
+                  alt={file.fileName}
+                  style={{ width: 300, borderRadius: 6 }}
+                />
+              ))}
+
       </div>
         {doc1.image && <_.Image src={doc1.image} alt="notice" />}
         {doc1.imageCaption && <_.ImageCaption>{doc1.imageCaption}</_.ImageCaption>}

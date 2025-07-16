@@ -11,6 +11,7 @@ export default function useNoticeState() {
         imageCaption: '',
         content: [],
         author: '',
+        team_ids: [],
     });
 
     return [notice, setNotice] as const;
