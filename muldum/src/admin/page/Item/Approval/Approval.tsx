@@ -5,7 +5,7 @@ import "@_styles";
 import NavBar from "@_all/component/sibebar/sidebar";
 import ApprovalList from "@_components/Item/List/ApprovalList";
 import Clubs from "./ClubList";
-import { submititem,nosubmititem } from "@_api/object/apply";
+import { submititem, nosubmititem } from "@_api/object/apply";
 import ClubSelector from "@_components/Item/List/ClubSelector";
 import RejectModal from "@_modal/Approval/Rejectmodal";
 import ApprovalModal from "@_modal/Approval/ApprovalModal";
@@ -43,17 +43,17 @@ const Approval = () => {
       alert("선택된 항목이 없습니다.");
       return;
     }
-  
-    const selectedReasons = selectedItems.map(id => reasons[id] || "");
-  
+
+    const selectedReasons = selectedItems.map((id) => reasons[id] || "");
+
     nosubmititem({
       itemIds: selectedItems,
       reasons: selectedReasons,
     });
-  
+
     setShowRejectModal(true);
   }
-  
+
   const toggleSelectAll = () => {
     if (selectAll) {
       setSelectedItems([]);
@@ -98,19 +98,18 @@ const Approval = () => {
             </_.AddonsArea>
 
             {selectedClub ? (
-  <ApprovalList
-    id={Clubs.find((c) => c.name === selectedClub)?.id}
-    selectAll={selectAll}
-    selectedItems={selectedItems}
-    setSelectedItems={setSelectedItems}
-    setAllItemIds={setAllItemIds}
-    reasons={reasons}
-    setReasons={setReasons}
-  />
-) : (
-  <_.Null>물품승인을 할 동아리를 선택해주세요</_.Null>
-)}
-
+              <ApprovalList
+                id={Clubs.find((c) => c.name === selectedClub)?.id}
+                selectAll={selectAll}
+                selectedItems={selectedItems}
+                setSelectedItems={setSelectedItems}
+                setAllItemIds={setAllItemIds}
+                reasons={reasons}
+                setReasons={setReasons}
+              />
+            ) : (
+              <_.Null>물품승인을 할 동아리를 선택해주세요</_.Null>
+            )}
           </>
         ) : (
           <>
@@ -155,7 +154,7 @@ const Approval = () => {
       {renderContent()}
       <_.ButtonGroup>
         <_.ApplyButton
-            onClick={() => SSubmit()}
+          onClick={() => SSubmit()}
           disabled={selectedItems.length === 0}
         >
           승인하기
