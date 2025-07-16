@@ -36,7 +36,7 @@ return (
     <_.Modal ref={modalRef}>
         <_.CheckIcon src={Reject} alt='CheckIcon' />
         <_.TextArea>
-            <_.Title>물품신청을 수락하였습니다</_.Title>
+            <_.Title>물품신청을 거절하였습니다</_.Title>
             <_.SubTitle>다른 곳을 누르거나 5초 동안 기다리면<br />메인화면으로 이동합니다</_.SubTitle>
             <_.counts>{counts}</_.counts>
         </_.TextArea>
