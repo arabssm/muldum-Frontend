@@ -166,21 +166,18 @@ export default function CreateNotice() {
                         onChange={handleChange}
                         placeholder="공지사항의 제목을 등록하세요"
                     />
-
-<_.CheckboxGroup>
+                    <_.CheckboxGroup>
   {Clubs.map((club) => (
     <label key={club.id} style={{ marginRight: '1rem' }}>
       <input
-        type="checkbox"
+        type="radio"
+        name="club" 
         value={club.id}
         checked={notice.team_ids.includes(club.id)}
-        onChange={(e) => {
-          const checked = e.target.checked;
+        onChange={() => {
           setNotice((prev) => ({
             ...prev,
-            team_ids: checked
-              ? [...prev.team_ids, club.id]
-              : prev.team_ids.filter((id) => id !== club.id),
+            team_ids: [club.id], 
           }));
         }}
       />
@@ -188,8 +185,6 @@ export default function CreateNotice() {
     </label>
   ))}
 </_.CheckboxGroup>
-
-
 
                     <_.TagBox>
                         <_.TagButton onClick={() => insertTag('제목1')}>h1</_.TagButton>
