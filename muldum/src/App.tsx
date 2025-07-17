@@ -14,17 +14,15 @@ import SNotice from '@_page/notice/notice';
 import Object from '@_page/object/object';
 import All from '@_page/object/all';
 import Resendpage from '@_page/object/resend';
-import PasswordModal from '@_component/modal/password/password';
+import PasswordModal from './all/component/modal/password/password';
 import { useRecoilValue } from 'recoil';
 import { loginModalState, whereismypasswordModalState } from "@_all/atom/Modal";
-import LoginModal from '@_component/modal/login/login';
+import LoginModal from './all/component/modal/login/login';
 export default function App() {
   //const role = "TEACHER"; 
   const role = "STUDENT";
   const isOpen = useRecoilValue(loginModalState)
-  const isOpen2=useRecoilValue(whereismypasswordModalState);
-
-
+  const isOpen2=useRecoilValue(whereismypasswordModalState);  
   return (
     <>
       <Routes>

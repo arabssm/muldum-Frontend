@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import { useState } from 'react';
 import emailIcon from '../../../assets/login/email.svg';
 import passwordIcon from '../../../assets/login/password.svg';
-import Login from '../../../../api/login.js'
+import {login} from '../../../../api/login/login'
 import { useNavigate } from 'react-router-dom';
 export default function LoginModal() {
   const navigate=useNavigate();
@@ -17,16 +17,12 @@ export default function LoginModal() {
     setModalOpen1(true);
     setModalOpen(false);
   }
-  async function Check(e) {
-    e.preventDefault();
-    setModalOpen(false);
-    console.log(24);
-    const loginResponse = await Login({ email, password });
-    
-    if (loginResponse) {
-      navigate('/');
+  async function Check() {
+    const result = await login(email, password);
+    if (result) {
+      alert("로그인 성공");
     } else {
-      alert('이메일이나 비밀번호가 틀렸습니다.');
+      alert("로그인 실패");
     }
   }
   
@@ -57,7 +53,7 @@ export default function LoginModal() {
           />
         </InputWrapper>
 
-        <LoginButton onClick={Check}>
+        <LoginButton onClick={()=>Check()}>
           로그인
         </LoginButton>
 
