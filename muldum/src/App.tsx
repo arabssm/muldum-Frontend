@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Main from '@_main/Main';
-import Notice from '@_pages/Notice/Notice/Notice';
-import DetailNotice from '@_notice/Detail/Examine/DetailNotice';
+import Notice from '@_notice/Notice';
+import DetailNotice from '@_notice/Detail/DetailNotice';
 import CreateNotice from '@_notice/Create/CreateNotice';
 import NotFound from '@_components/NotFound/NotFound';
 import NoticeEdit from '@_pages/Notice/Detail/Edit/NoticeEdit';

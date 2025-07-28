@@ -26,7 +26,8 @@ export default async function spendEmail(email:String) {
       console.error('실패:', err);
       return false; 
     }
-  }export async function login(email: string, password: string): Promise<boolean> {
+  }
+  export async function login(email: string, password: string): Promise<boolean> {
     try {
       const res = await axiosInstance.post('/ara/auth/login', {
         email,

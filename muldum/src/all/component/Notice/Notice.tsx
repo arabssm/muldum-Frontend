@@ -2,13 +2,13 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as _ from './style';
 import '@_styles';
-import Search from '../../../../all/assets/onboarding/search.svg';
-import Add from '../../../../all/assets/add.svg'
+import Search from '@_assets/onboarding/search.svg';
+import Add from '@_assets/add.svg'
 import Box from './Box';
-import NavBar from '../../../../all/component/sibebar/sidebar';
+import NavBar from '@_navbar/sidebar';
 import Pagination from './Pagination';
 import { NoticeItem } from './type';
-import {getNotice} from '../../../../api/notice/notice';
+import {getNotice} from '@_api/notice/notice';
 export default function Notice() {
     const [notices, setNotices] = useState<NoticeItem[]>([]);
     const [search, setSearch] = useState('');

@@ -32,7 +32,11 @@ export default function NavBar() {
     <TagComponent
       key={item.label}
       onClick={() => {
+        if (item.label === '로그인') {
+          setModalOpen(true);
+        } else {
           navigate(item.path[0]);
+        }
       }}
       isActive={isActive}
     >

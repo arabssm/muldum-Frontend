@@ -1,11 +1,11 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import * as _ from './style';
-import NavBar from '../../../../../all/component/sibebar/sidebar';
+import NavBar from '../../sibebar/sidebar';
 import Notfound from '@_notfound/NotFound';
 import DeleteModal from '@_modal/Delete/DeleteModal';
 import ConfirmDeleteModal from '@_modal/Notice/ConfirmDelete';
-import makeDocument from '../makeDocument';
-import { getNoticeDetail,DeleteNotice,Deletefile } from '../../../../../api/notice/notice';
+import makeDocument from './makeDocument';
+import { getNoticeDetail,DeleteNotice,Deletefile } from '../../../../api/notice/notice';
 import { useEffect, useState } from 'react';
 
 export default function Detail() {
@@ -61,7 +61,7 @@ export default function Detail() {
     setShowModal(false);
     setShowConfirmModal(true);
   };
-  const role="TEACHER"
+
   return (
     <_.Container>
       <NavBar />

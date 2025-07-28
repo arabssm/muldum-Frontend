@@ -15,17 +15,16 @@ export default defineConfig({
       '@_components': path.resolve(__dirname, 'src/admin/components'),
       '@_menu': path.resolve(__dirname, 'src/admin/components/Menu'),
       '@_modal': path.resolve(__dirname, 'src/admin/components/Modal'),
-      '@_navbar': path.resolve(__dirname, 'src/admin/components/NavBar'),
+      '@_navbar': path.resolve(__dirname, 'src/all/component/sibebar'), 
       '@_notfound': path.resolve(__dirname, 'src/admin/components/NotFound'),
-      '@_slide': path.resolve(__dirname, 'src/admin/components/Slide'),
       '@_pages': path.resolve(__dirname, 'src/admin/page'),
       '@_main': path.resolve(__dirname, 'src/admin/page/Main'),
-      '@_notice': path.resolve(__dirname, 'src/admin/page/Notice'),
+      '@_notice': path.resolve(__dirname, 'src/all/component/Notice'),
       '@_styles': path.resolve(__dirname, 'src/App.css'),
       '@_page': path.resolve(__dirname, 'src/student/page'),
       '@_component': path.resolve(__dirname, 'src/student/component'),
+      '@_all': path.resolve(__dirname, 'src/all'),
       '@_api': path.resolve(__dirname, 'src/api'),
-      '@_all': path.resolve(__dirname, 'src/all')
     }
   }
 });
